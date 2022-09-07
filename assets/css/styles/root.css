@@ -1,0 +1,55 @@
+
+:root {
+
+  /* ###### COLORS ###### */
+
+  --red: #F12D31;
+  --green: #59B747;
+  --orange: #FF9F29;
+  --red-orange: #F17B31;
+  --yellow: #F9D330;
+  --purple: #8F2D94;
+  --brown: #87431E;
+  --blue: #3799DA;
+  --green-1: hsl(79, 59%, 63%);
+
+  /* grays */
+
+  --white:    #fff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-200-p5: hsl(210 16% 93% / .7);
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-700-p3: hsl(210 9% 31% / .3) ;
+  --gray-800: hsl(210, 10%, 23%);
+  --gray-900: #212529;
+
+
+
+  /* ###### FONT FAMILY ###### */
+
+  --ff-lobster-italic: 'Lobster', cursive;
+  --ff-lobster: 'Lobster Two', cursive;
+  --ff-lato: 'Lato', sans-serif;
+
+
+  /* ###### FONT SIZES ###### */
+
+  --step--3: clamp(0.58rem, calc(0.50rem + 0.37vw), 0.77rem);
+  --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
+  --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
+  --step-0: clamp(0.875rem, 2vw, 1rem);
+  --step-1: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
+  --step-2: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
+  --step-3: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
+  --step-4: clamp(2.07rem, calc(1.45rem + 3.10vw), 3.66rem);
+  --step-5: clamp(2.49rem, calc(1.67rem + 4.08vw), 4.58rem);
+
+
+
+  --section-padding: clamp(0.75rem, calc(-2.47rem + 16.10vw), 9.00rem);
+}

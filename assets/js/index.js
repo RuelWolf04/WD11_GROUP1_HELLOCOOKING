@@ -1,3 +1,22 @@
+
+
+
+// ----------------Navbar Menu Toggle
+
+const openMenuBtn = document.querySelector(".js-nav-menu-open");
+const mainMenu = document.querySelector(".js-nav-menu");
+
+openMenuBtn.addEventListener("click", () => {
+  let btnAttribute = JSON.parse(openMenuBtn.getAttribute("aria-expanded"))
+  // alert(btnAttribute)
+  
+  openMenuBtn.setAttribute("aria-expanded", !btnAttribute)
+})
+
+
+
+
+// ----------------Carousel
 const carouselBtns = document.querySelectorAll("[data-carousel-button]"); 
 
 carouselBtns.forEach(carouselBtn => {
@@ -15,3 +34,9 @@ carouselBtns.forEach(carouselBtn => {
     delete activeSlide.dataset.active
   })
 })
+
+
+
+
+
+
