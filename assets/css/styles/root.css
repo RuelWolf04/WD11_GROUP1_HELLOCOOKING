@@ -7,7 +7,7 @@
   --green: #59B747;
   --orange: #FF9F29;
   --red-orange: #F17B31;
-  --yellow: #F9D330;
+  --yellow: #f9d42f;
   --purple: #8F2D94;
   --brown: #87431E;
   --blue: #3799DA;
@@ -52,4 +52,10 @@
 
 
   --section-padding: clamp(0.75rem, calc(-2.47rem + 16.10vw), 9.00rem);
+
+
+
+  /* ###### BUTTON PADDING ###### */
+  --button-padding: .6125em 3em;
+  
 }

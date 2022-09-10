@@ -16,27 +16,108 @@ openMenuBtn.addEventListener("click", () => {
 
 
 
-// ----------------Carousel
-const carouselBtns = document.querySelectorAll("[data-carousel-button]"); 
+// ----------------Hero Carousel
+const heroSlide = document.querySelector(".hero-carousel-slides") 
+const heroNextBtn = document.querySelector("#hc-next-btn")
+const heroPrevBtn = document.querySelector("#hc-prev-btn")
 
-carouselBtns.forEach(carouselBtn => {
-  carouselBtn.addEventListener('click', () => {
-    const offset = carouselBtn.dataset.carouselButton === 'next' ? 1 : -1;
-    const slides = carouselBtn.closest('[data-carousel]').querySelector('[data-slides]')
+let heroSlides = document.querySelectorAll(".hc-slides-slide")
+let index = 1
+let interval = 5000
 
-    const activeSlide =  slides.querySelector('[data-active]')
-    let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+const firstCopy = heroSlides[0].cloneNode(true)
+const lastCopy = heroSlides[heroSlides.length - 1].cloneNode(true)
 
-    if(newIndex <= 0) newIndex = slides.children.length - 1
-    if(newIndex >= slides.children.length) newIndex = 0
+firstCopy.id = 'first-copy'
+lastCopy.id = 'last-copy'
 
-    slides.children[newIndex].dataset.active = true
-    delete activeSlide.dataset.active
+heroSlide.append(firstCopy)
+heroSlide.prepend(lastCopy)
+
+
+const slideWidth = heroSlides[index].clientWidth
+heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
+
+const startHeroSlide = () => {
+  heroIntervalId = setInterval(() => {
+    nextSlide()
+  }, interval)
+}
+
+heroSlide.addEventListener('transitionend', () => {
+  heroSlides = document.querySelectorAll(".hc-slides-slide")
+  if(heroSlides[index].id === firstCopy.id){
+    index = 1
+  heroSlide.style.transition = `none`
+  heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
+  }
+
+
+  if(heroSlides[index].id === lastCopy.id){
+    index = heroSlides.length - 2;
+    heroSlide.style.transition = `none`
+    heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
+    }
+})
+
+heroSlide.addEventListener('mouseenter', () => {
+  clearInterval(heroIntervalId)
+})
+heroSlide.addEventListener('mouseleave', startHeroSlide)
+
+const nextSlide = () => {
+  if(index >= heroSlides.length - 1) return
+  index++
+  heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
+  heroSlide.style.transition = `.7s ease-out`
+}
+
+const prevSlide = () => {
+  if(index <= 0) return
+  index--
+  heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
+  heroSlide.style.transition = `.7s ease-out`
+}
+
+
+
+heroNextBtn.addEventListener("click", nextSlide)
+heroPrevBtn.addEventListener("click", prevSlide)
+
+startHeroSlide()
+
+
+
+
+
+
+
+//  faqs
+
+const faq = document.querySelectorAll('.faq')
+
+faq.forEach((item, index) => {
+  let header = item.querySelector("header")
+  header.addEventListener("click", () => {
+    item.classList.toggle("open")
+
+    let faqAnswer = item.querySelector(".answer");
+    if(item.classList.contains("open")){
+      faqAnswer.style.height = `${faqAnswer.scrollHeight}px`
+    } else {
+    faqAnswer.style.height = '0px'
+    }
+    closeFaq(index)
   })
 })
 
-
-
-
-
-
+function closeFaq(index){
+  faq.forEach((otherItem, otherIndex) => {
+    if(otherIndex != index){
+      otherItem.classList.remove('open')
+      let otherAnswer = otherItem.querySelector(".answer")
+      otherAnswer.style.height = '0px';
+    }
+  
+})
+};
