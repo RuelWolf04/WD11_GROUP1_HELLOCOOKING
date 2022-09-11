@@ -48,7 +48,8 @@ p {
   padding: 0;
 }
 
-img { width: 100%; }
+img { width: 100%; 
+height: auto;}
 
 
 
@@ -66,24 +67,27 @@ img { width: 100%; }
 nav {
   scroll-snap-align: start;
 
-  display: grid;
-  width: 100%;
-  grid-area: nav;
-  grid-template-areas:
-    'logo menu right';
-  grid-template-columns: 200px auto 200px;
-  grid-template-rows: 50px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  z-index: 20;
   transition: all 600ms ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+  padding: 1em var(--section-padding);
+  background-color: white;
+  box-shadow: 0 5px 20px var(--gray-700-p3);
+
+  z-index: 20;
 }
 
 .nav__logo-container {
   grid-area: logo;
-  width: 70%;
+  width: 30vw;
+  max-width: 150px;
 }
-
 
 .nav__center {
   grid-area: menu;
@@ -92,6 +96,7 @@ nav {
 .nav__menu {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .nav__menu-item {
@@ -115,16 +120,27 @@ nav a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: end;
+  width: min(150px, 20vw);
+  /* max-width: 150px; */
 }
 
 .nav__right>* {
   margin-inline: 5px;
 }
 
-.nav__right span {
-  padding: 0.3125em 0.625em;
-  border: 1px solid var(--green);
-  border-radius: 50%;
+.nav__right button {
+  width: 2em;
+  aspect-ratio: 1/ 1;
+  border: 1px solid transparent;
+  border-radius: 100vmax;
+  font-size: var(--step-0);
+  display: grid;
+  place-content: center;
+}
+
+.nav__right button i {
+  padding: 0;
+  margin: 0;
 }
 
 .nav__right a {
@@ -136,11 +152,11 @@ nav a:focus-visible {
 
 .nav__menu-btn {
   display: none;
+  background: none;
 }
 
 .open-menu-btn {
   height: 30px;
-  background-color: aqua;
   user-select: none;
   appearance: none;
   border: 0;
@@ -163,6 +179,13 @@ nav a:focus-visible {
 .hamRotate180.active {
   transform: rotate(180deg);
 }
+
+svg.ham {
+  width: max(calc(10vw - 3rem), 30px);
+}
+
+
+
 .line {
   fill:none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;

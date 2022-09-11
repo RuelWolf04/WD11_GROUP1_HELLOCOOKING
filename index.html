@@ -49,7 +49,6 @@
                 <svg
                   class="ham hamRotate ham1"
                   viewBox="0 0 100 100"
-                  width="80"
                   onclick="this.classList.toggle('active')"
                 >
                   <path
@@ -86,9 +85,9 @@
             </div>
 
             <div class="nav__right">
-              <span><i class="fa-solid fa-magnifying-glass"></i></span>
-              <span><i class="fa-solid fa-cart-shopping"></i></span>
-              <a href="#">Sign In</a>
+              <!-- <button><i class="fa-solid fa-magnifying-glass"></i></button> -->
+              <!-- <button><i class="fa-solid fa-cart-shopping"></i></button> -->
+              <button><i class="fa-solid fa-user"></i></button>
             </div>
           </nav>
         </div>
@@ -114,8 +113,9 @@
               </p>
               <button id="hero-left-btn">Order Now</button>
             </div>
+
             <div class="col-lg-7" id="hero-right">
-              <div class="hero-carousel-container">
+              <!-- <div class="hero-carousel-container">
                 <div class="hero-carousel-slides">
                   <div class="hc-slides-slide">
                     <img
@@ -142,14 +142,45 @@
                     />
                   </div>
                 </div>
-              </div>
-              <div class="hc-btn-container">
-                <button class="hero-carousel-btn" id="hc-prev-btn">
-                  <i class="fa-solid fa-arrow-left"></i>
-                </button>
-                <button class="hero-carousel-btn" id="hc-next-btn">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </button>
+              </div> -->
+
+              <div class="hero-carousel-container">
+                <div class="hero-slides" data-carousel-slides>
+                  <div class="hero-slide">
+                    <img
+                      src="assets/imgs/recipes/main-dish/japanese.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="hero-slide" data-active>
+                    <img
+                      src="assets/imgs/recipes/main-dish/pineapple_fried_rice.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="hero-slide">
+                    <img
+                      src="assets/imgs/recipes/main-dish/shrimp_salad_with_pineapples2.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="hc-btn-container">
+                  <button
+                    class="hero-carousel-btn"
+                    id="hc-prev-btn"
+                    data-carousel-btn="prev"
+                  >
+                    <img src="assets/imgs/icon/carrot.png" alt="" />
+                  </button>
+                  <button
+                    class="hero-carousel-btn"
+                    id="hc-next-btn"
+                    data-carousel-btn="next"
+                  >
+                    <img src="assets/imgs/icon/carrot.png" alt="" />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -571,9 +602,12 @@
         </div>
       </section> -->
       <section id="faq-section">
-        <div class="container bg-success">
-          <h4 id="faq-section-title">Frequently Ask Questions</h4>
+        <div class="container">
+          <div class="faq-section-left">
+            <img src="assets/imgs/recipes/main-dish/japanese.png" alt="" />
+          </div>
           <div class="faqs-container">
+            <h4 id="faq-section-title">Frequently Ask Questions</h4>
             <div class="faq">
               <header class="d-flex justify-content-between">
                 <span class="title">How was your bootcamp?</span>
@@ -597,6 +631,35 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Explicabo laudantium perferendis in pariatur nam quia numquam
                   deleniti unde labore eveniet!
+                </p>
+              </div>
+            </div>
+            <div class="faq">
+              <header class="d-flex justify-content-between">
+                <span class="title">How was your bootcamp?</span>
+                <i class="fa-solid fa-caret-right"></i>
+              </header>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Explicabo laudantium perferendis in pariatur nam quia numquam
+                  deleniti unde labore eveniet!
+                </p>
+              </div>
+            </div>
+            <div class="faq">
+              <header class="d-flex justify-content-between">
+                <span class="title">How was your bootcamp?</span>
+                <i class="fa-solid fa-caret-right"></i>
+              </header>
+              <div class="answer">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Explicabo laudantium perferendis in pariatur nam quia numquam
+                  deleniti unde labore eveniet! Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Deleniti sunt et eaque! Voluptas
+                  ipsam necessitatibus aliquam quas adipisci possimus
+                  distinctio!
                 </p>
               </div>
             </div>

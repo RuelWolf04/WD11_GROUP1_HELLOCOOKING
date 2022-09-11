@@ -42,7 +42,7 @@
   --step--3: clamp(0.58rem, calc(0.50rem + 0.37vw), 0.77rem);
   --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
   --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
-  --step-0: clamp(0.875rem, 2vw, 1rem);
+  --step-0: clamp(0.875rem, 2vw, 1.2125rem);
   --step-1: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
   --step-2: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
   --step-3: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
@@ -51,7 +51,7 @@
 
 
 
-  --section-padding: clamp(0.75rem, calc(-2.47rem + 16.10vw), 9.00rem);
+  --section-padding: clamp(0.75rem, 10vw, 9.00rem);
 
 
 
