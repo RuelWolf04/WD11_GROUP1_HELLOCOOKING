@@ -22,11 +22,12 @@
 ###################################*/
 
 #hero {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   position: relative;
-  padding-top: 50px
+  padding-top: 10vh;
+  padding-bottom: 5rem;
 }
 
 #hero-left {
@@ -44,60 +45,19 @@
   color: var(--gray-100);
   border-radius: .3125em;
 }
-/*
 
-.hero-carousel-container {
-  width: min(100%, 50rem);
-  aspect-ratio: 1/ 1;
-  overflow: hidden;
-  border: 15px solid;
-border-image: url(../../imgs/border/border.png);
-border-image-slice: 50;
-border-image-width: 50px;
-border-image-outset: 20px;
-border-image-repeat: repeat;
-position: relative;
-background-color: #6ef9af;
-}
-.hero-carousel-slides {
-  height: 100%;
-  display: flex;
-  /* justify-content: center; */
-  /* background-color: #faf206; */
-/* }
 
-.hc-slides-slide {
-  min-width: 100%;
-  overflow: hidden;
-}
-
-.hc-slides-slide > img {
-  height: 100%;
-  width: 100%;
-}
-
-.hc-btn-container {
-  position: absolute;
-  bottom: 10%;
-  right: 10%;
-}
-
-.hc-btn-container .hero-carousel-btn {
-  background-color: var(--green);
-  font-size: 1rem;
-  width: 2.5em;
-  height: 2.5em;
-  color: var(--gray-100);
-  border-radius: 100vmax;
-} */
 
 #hero-right {
-  /* min-height: 100%; */
-  /* background-color: #6ef9af; */
+  height: max-content;
 }
 
 .hero-carousel-container {
-  height: calc(30vw + 1rem);
+  /* height: calc(100vh - 5rem); */
+  height: 100%;
+  height: max-content;
+
+  /* height: calc(30vw + 1rem); */
   /* background-color: #fbf675; */
   /* overflow: hidden; */
   position: relative;
@@ -109,12 +69,24 @@ background-color: #6ef9af;
   position: relative;
   /* background-color: #85FFBD; */
   height: 100%;
+  aspect-ratio: 1/1;
+  margin-inline: auto;
 }
 
 .hero-slides .hero-slide {
   position: absolute;
   inset: 0;
   opacity: 0;
+  /* width: min(500px, 50vw); */
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1/1;
+  border-radius: 100vmax;
+  background-color: #6ef9af;
+  padding: 2em;
+  outline: 2px dashed #fb8075;
+  outline-offset: -20px;
+  margin: auto;
 }
 
 .hero-slides .hero-slide[data-active] {
@@ -132,8 +104,8 @@ background-color: #6ef9af;
 
 .hc-btn-container {
   position: absolute;
-  right: .6125rem;
-  bottom: -2rem;
+  right: 5vw;
+  bottom: 5vw;
 }
 
 .hc-btn-container button {
@@ -157,6 +129,20 @@ background-color: #6ef9af;
 .hc-btn-container button#hc-next-btn {
   transform: rotate(-90deg);
 }
+
+#hero svg{
+  position: absolute;
+  z-index: -1;
+  top: -10%;
+  right: 0;
+  width: auto;
+
+}
+
+#hero svg path {
+  fill: #fbf675;
+}
+
 
 /* ################################
       Main
@@ -297,18 +283,25 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 .reasons{
   width: min(100%, 500px);
   margin: .6125rem;
-  padding: 1rem;
-  height: 150px;
+  padding: 1.5rem;
+
   align-items: center;
   background-color: #FFFB7D;
-  border-radius: 5px;
+  border-radius: 2rem;
+
+  /* border: 1px dashed black;   */
+  outline: 1px dashed black;
+  outline-offset: -5px;
 }
 
 .reason-right {
   display: grid;
-  place-content: center;
+  place-items: center;
 }
 
+.reason-right > img {
+  width: min(80%, 80px);
+}
 
 
 
@@ -358,16 +351,21 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 
 .slide {
 width: 350px;
+/* height: 24rem; */
 position: relative;
 top: 0;
 left: 0;
-background-color: #85FFBD;
+background-color: #ddffed;
 perspective: 100px;
 padding: 1rem;
 border-radius: 10px;
-
-scroll-snap-align: start;
 transition: .5s ease-out;
+text-overflow: ellipsis;
+box-shadow: 1px 1px 2px black;
+/* border-image: url('../../imgs/border/border-diamond.png');
+border-image-outset: -10px;
+border-image-slice: 30;
+border-image-repeat: round; */
 }
 
 .slide:hover {
@@ -398,6 +396,7 @@ transition: .5s ease-out;
 .user-comment {
   padding: .6125em;
   text-overflow: ellipsis;
+
 }
 
 
@@ -408,53 +407,14 @@ transition: .5s ease-out;
 /* ################################
       Main - FAQS
 ###################################*/
-/* #faqs {
-  background-color: #6ef9af;
-}
-
-#faqs label {
-  background-color: #fbf675;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-#faqs input {
-  display: none;
-}
-
-#faqs span {
-  transition: .2s ease-out;
-}
-
-#faqs input:checked ~ label span {
-  transform: rotate(45deg);
-}
-
-#faqs .faq-answer{
-  display: none;
-  height: 0;
-  padding: 1em;
-  padding-right: 2em;
-  transition: all .5s ease-out;
-}
-
-#faqs input:checked ~ .faq-answer{
-  display: block;
-  height: 100%;
-  max-height: 400px;
-}
-
-
- */
-
 #faq-section {
-  /* text-align: center; */
   min-height: 100vh;
   display: grid;
   place-items: center;
-  /* background: url('../../imgs/backgrounds/3.jpg') rgba(128, 128, 128, 0.738); */
+  background: url('../../imgs/backgrounds/3.jpg') rgba(128, 128, 128, 0.738);
   background-blend-mode: multiply;
+  background-size: cover;
+  z-index: -10;
 }
 
 #faq-section .container {
@@ -464,12 +424,10 @@ transition: .5s ease-out;
 
 #faq-section .container .faq-section-left {
   position: absolute;
-  width: 100%;
-  max-width: 40rem;
+  width: 50vw;
   left: -5rem;
   top: 50%;
   transform: translateY(-50%);
-  z-index: -1;
 
 }
 
@@ -481,12 +439,13 @@ transition: .5s ease-out;
 }
 
 .faqs-container {
-  background-color: rgba(240, 255, 255, 0.605);
+  background-color: rgba(240, 255, 255, 0.805);
   padding: .6125em;
   border-radius: 10px;
   width: 100%;
   max-width: 500px;
   margin-left: auto;
+  position: relative;
 }
 
 .faq {
@@ -523,7 +482,10 @@ transition: .5s ease-out;
 
 .faq.open .answer {
   /* border-top: 1px dotted black; */
-  padding-bottom: 1em;
+  padding-bottom: 2em;
+  background-color: whitesmoke;
+  border-inline: 5px solid peru;
+  border-radius: 10px;
 }
 
 
@@ -603,8 +565,12 @@ transition: .5s ease-out;
 
 
 
-  .hero-carousel-container {
+  /* .hero-carousel-container {
     height: 500px;
+  } */
+
+  #faq-section .container .faq-section-left{
+    z-index: 0;
   }
 
 
@@ -619,9 +585,31 @@ transition: .5s ease-out;
     padding-inline: 10px;
   }
 
-
   .hero-carousel-container {
     height: 250px;
+  }
+
+
+  .slide-track {
+    width: calc(310px *16);
+  }
+
+  .slide{
+    width: 300px;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0); 
+    }
+    100% {
+      transform: translateX(calc(-310px * 10));
+    }
+  }
+
+
+  .faq-section-left {
+    display: none;
   }
 
 

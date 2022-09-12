@@ -86,7 +86,7 @@ nav {
 .nav__logo-container {
   grid-area: logo;
   width: 30vw;
-  max-width: 150px;
+  max-width: 120px;
 }
 
 .nav__center {
@@ -128,7 +128,7 @@ nav a:focus-visible {
   margin-inline: 5px;
 }
 
-.nav__right button {
+.nav__right button{
   width: 2em;
   aspect-ratio: 1/ 1;
   border: 1px solid transparent;
