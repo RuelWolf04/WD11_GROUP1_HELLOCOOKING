@@ -1,4 +1,14 @@
 
+// ----------------Nav shrink
+
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('scroll', bodyScroll)
+})
+
+function bodyScroll(e){
+  (window.scrollY > 60) ? document.body.classList.add('bodyScroll') : document.body.classList.remove('bodyScroll')
+}
+
 
 
 // ----------------Navbar Menu Toggle
@@ -14,77 +24,7 @@ openMenuBtn.addEventListener("click", () => {
 })
 
 
-
-
-// ----------------Hero Carousel
-// const heroSlide = document.querySelector(".hero-carousel-slides") 
-// const heroNextBtn = document.querySelector("#hc-next-btn")
-// const heroPrevBtn = document.querySelector("#hc-prev-btn")
-
-// let heroSlides = document.querySelectorAll(".hc-slides-slide")
-// let index = 1
-// let interval = 5000
-
-// const firstCopy = heroSlides[0].cloneNode(true)
-// const lastCopy = heroSlides[heroSlides.length - 1].cloneNode(true)
-
-// firstCopy.id = 'first-copy'
-// lastCopy.id = 'last-copy'
-
-// heroSlide.append(firstCopy)
-// heroSlide.prepend(lastCopy)
-
-
-// const slideWidth = heroSlides[index].clientWidth
-// heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
-
-// const startHeroSlide = () => {
-//   heroIntervalId = setInterval(() => {
-//     nextSlide()
-//   }, interval)
-// }
-
-// heroSlide.addEventListener('transitionend', () => {
-//   heroSlides = document.querySelectorAll(".hc-slides-slide")
-//   if(heroSlides[index].id === firstCopy.id){
-//     index = 1
-//   heroSlide.style.transition = `none`
-//   heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
-//   }
-
-
-//   if(heroSlides[index].id === lastCopy.id){
-//     index = heroSlides.length - 2;
-//     heroSlide.style.transition = `none`
-//     heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
-//     }
-// })
-
-// heroSlide.addEventListener('mouseenter', () => {
-//   clearInterval(heroIntervalId)
-// })
-// heroSlide.addEventListener('mouseleave', startHeroSlide)
-
-// const nextSlide = () => {
-//   if(index >= heroSlides.length - 1) return
-//   index++
-//   heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
-//   heroSlide.style.transition = `.7s ease-out`
-// }
-
-// const prevSlide = () => {
-//   if(index <= 0) return
-//   index--
-//   heroSlide.style.transform = `translateX(${-slideWidth * index}px)`
-//   heroSlide.style.transition = `.7s ease-out`
-// }
-
-
-
-// heroNextBtn.addEventListener("click", nextSlide)
-// heroPrevBtn.addEventListener("click", prevSlide)
-
-// startHeroSlide()
+// ----------------hero carousel
 
 const carouselBtns = document.querySelectorAll("[data-carousel-btn]")
 
@@ -113,7 +53,7 @@ carouselBtns.forEach(cBtn => {
 
 
 
-//  faqs
+// ----------------faqs
 
 const faq = document.querySelectorAll('.faq')
 

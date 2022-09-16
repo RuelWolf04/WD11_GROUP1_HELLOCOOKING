@@ -87,6 +87,7 @@ nav {
   grid-area: logo;
   width: 30vw;
   max-width: 120px;
+  transform: .3s ease-out;
 }
 
 .nav__center {
@@ -206,3 +207,10 @@ svg.ham {
   stroke-dashoffset: -138px;
 }
 /* menu */
+
+
+
+
+.bodyScroll .nav__logo-container{
+  max-width: 80px;
+}
