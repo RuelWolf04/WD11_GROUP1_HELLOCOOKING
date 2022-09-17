@@ -95,116 +95,8 @@
 
       <!-- end header -->
     </header>
-    <main>
-      <div class="container" id="filteration">
-        <div class="filter-container d-flex">
-          <div class="input-group">
-            <input type="text" name="" id="" />
-            <button><i class="fa-solid fa-magnifying-glass"></i> Search</button>
-          </div>
-          <div class="filter-button">
-            <i class="fa-solid fa-filter"></i> Filter
-          </div>
-          <div class="filter-button">
-            <i class="fa-solid fa-cart-shopping"></i> Cart
-          </div>
-        </div>
-      </div>
 
-      <section id="product-cards">
-        <div class="container">
-          <div class="product-container d-flex">
-            <div class="card">
-              <div class="card-image-container">
-                <img
-                  src="assets/imgs/recipes/main-dish/TogueGuisado.jpg"
-                  alt=""
-                />
-              </div>
-              <div class="card-footer">
-                <div class="card-footer-title">
-                  <h3 class="card-title">Chicken Adobo</h3>
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p class="card-text">
-                  with garlic sauce
-                </p>
-                <div class="card-footer-info">
-                  <span class="card-min">20m</span> | <span class="card-category">Main Dish</span>
-                </div>
-
-                  <button class="btn btn-primary">Order Now</button>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image-container">
-                <img
-                  src="assets/imgs/productImgs/chickenadobo.png"
-                  alt=""
-                  card="card-img-top"
-                />
-              </div>
-              <div class="card-footer">
-                <div class="card-footer-title">
-                  <h3 class="card-title">Chicken Adobo</h3>
-                  <i class="fa-solid fa-cart-shopping"></i>
-                </div>
-                <p class="card-text">
-                  with garlic sauce
-                </p>
-                <div class="card-footer-info">
-                  <span class="card-min">20m</span> | <span class="card-category">Main Dish</span>
-                </div>
-
-                  <button class="btn btn-primary">Order Now</button>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image-container">
-                <img
-                  src="assets/imgs/productImgs/eggplantbake.png"
-                  alt=""
-                  card="card-img-top"
-                />
-              </div>
-              <div class="card-body">
-                <h3 class="card-title">Eggplant with Black Beans Pasta</h3>
-                <br />
-                <p class="card-text">
-                  To add some body, black beans make this great vegetarian dish
-                  delicious! Served over pasta, top with parmesan cheese.
-                </p>
-                <h5>Food Type to order:</h5>
-                <button class="btn btn-primary">Ready-to-Eat</button>
-                <br />
-                <br />
-                <button class="btn btn-primary">Ready-to-Cook</button>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image-container">
-                <img
-                  src="assets/imgs/productImgs/eggplantparmesan.png"
-                  alt=""
-                  card="card-img-top"
-                />
-              </div>class="card-title">Low-Fat Eggplant Parmesan</h3>
-                <br />
-                <p class="card-text">
-                  An Italian dish made up of slices of eggplant that are coated
-                  in flour, breadcrumbs, and then baked in layers of rich
-                  marinara and melted cheese!
-                </p>
-                <h5>Food Type to order:</h5>
-                <button class="btn btn-primary">Ready-to-Eat</button>
-                <br />
-                <br />
-                <button class="btn btn-primary">Ready-to-Cook</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <!-- <main>
       <div class="container d-flex flex-row">
         <div class="bg-primary">
           <div class="card">
@@ -784,6 +676,140 @@
           </div>
         </div>
       </div>
+    </main> -->
+    <main>
+      <div class="container" id="filteration">
+        <div class="d-flex gap-2">
+          <div class="input-group" id="search-">
+            <input type="text" class="form-control" placeholder="" />
+            <button class="btn" id="product-search-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span class="btn-name">Search</span>
+            </button>
+          </div>
+          <button class="btn" id="product-filter-btn" type="button">
+            <i class="fa-solid fa-filter"></i>
+            <span class="btn-name">Filter</span>
+          </button>
+          <button class="btn" id="product-cart-btn" type="button">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="btn-name">Cart</span>
+          </button>
+        </div>
+      </div>
+      <section id="products-section">
+        <div class="container">
+          <div class="product-section-container mb-3">
+            <h4 class="mb-3" id="product-section-subheading">Main Dish</h4>
+            <div
+              class="row row-cols-1 row-cols-lg-5 row-cols-md-3 row-cols-sm-3 g-2"
+            >
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-image-container">
+                    <img src="assets/imgs/productImgs/chickenadobo.png" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Adobo</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+
+                    <button type="btn" id="card-btn">Order Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-image-container">
+                    <img src="assets/imgs/productImgs/chickenadobo.png" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Adobo</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
+
+                    <button type="btn" id="card-btn">Order Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-image-container">
+                    <img src="assets/imgs/productImgs/chickenadobo.png" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Adobo</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Lorem ipsum dolor sit amet.
+                      j;ejtorutpjrtjpjfp;ewupvnu0nu[p]
+                    </p>
+
+                    <button type="btn" id="card-btn">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-section-container mb-3">
+            <h4 class="mb-3" id="product-section-subheading">Desserts</h4>
+            <div
+              class="row row-cols-1 row-cols-lg-5 row-cols-md-3 row-cols-sm-3 g-2"
+            >
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-image-container">
+                    <img src="assets/imgs/productImgs/chickenadobo.png" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Adobo</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
+
+                    <button type="btn" id="card-btn">Order Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-image-container">
+                    <img src="assets/imgs/productImgs/chickenadobo.png" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Adobo</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
+
+                    <button type="btn" id="card-btn">Order Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100">
+                  <div class="card-image-container">
+                    <img src="assets/imgs/productImgs/chickenadobo.png" />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">Chicken Adobo</h5>
+                    <p class="card-text">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Lorem ipsum dolor sit amet.
+                      j;ejtorutpjrtjpjfp;ewupvnu0nu[p]
+                    </p>
+
+                    <button type="btn" id="card-btn">Order Now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <!-- start footer -->

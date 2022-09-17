@@ -1,0 +1,64 @@
+main{
+  padding-top: 100px;
+}
+
+
+
+/* ================ Hero ================= */
+
+#about-section-hero {
+  padding-block: 5rem;
+}
+
+.about-hero-content h1 {
+  font-size: var(--step-4);
+  text-transform: capitalize;
+}
+
+.line-1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.about-hero-content h3, 
+.about-hero-content h5 {
+  font-family: var(--ff-lato);
+}
+
+.about-divider {
+  background-color: green;
+  height: 2px;
+  width: 10%;
+  max-width: 20rem;
+  margin-bottom: 1rem;
+}
+
+
+/* ================ Who we are ================= */
+
+#about-section-wwa{
+  padding-block: 5rem;
+}
+
+.wwa-content {
+  width: min(100%, 60vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.wwa-content .line-1{
+  font-family: var(--ff-lato);
+  margin-bottom: .625rem;
+}
+
+.wwa-content .wwa-content-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.wwa-content .wwa-content-paragraph {
+  text-align: center;
+}
