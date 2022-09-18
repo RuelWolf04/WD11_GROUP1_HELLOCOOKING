@@ -481,7 +481,6 @@ border-image-repeat: round; */
 }
 
 .faq.open .answer {
-  /* border-top: 1px dotted black; */
   padding-bottom: 2em;
   background-color: whitesmoke;
   border-inline: 5px solid peru;

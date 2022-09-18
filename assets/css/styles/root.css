@@ -49,6 +49,11 @@
   --step-4: clamp(2.07rem, calc(1.45rem + 3.10vw), 3.66rem);
   --step-5: clamp(2.49rem, calc(1.67rem + 4.08vw), 4.58rem);
 
+  --fs-16: 1rem;
+  --fs-50: 3.125rem;
+  --fs-26: 1.625rem;
+  --fs-20: 1.25rem;
+
 
 
   --section-padding: clamp(0.75rem, 10vw, 9.00rem);
