@@ -1,0 +1,28 @@
+.header {
+    padding-top: 100px;
+  }
+  
+.container img {
+    border-radius: 5%;
+}
+#description {
+    padding-top: 50px;
+    text-align: center;
+    background-color: rgb(209, 242, 80);
+    border-radius: 5%;
+}
+#ingredients, #directions {
+    padding: 50px;
+    background-color: rgb(209, 242, 80);
+}
+#directions {
+    padding: 50px;
+    background-color: rgb(141, 231, 96);
+}
+#btn {
+    background-color: #5fc44b;
+    color: var(--gray-100);
+    width: 90%;
+    padding-block: .325rem;
+    border-radius: 100vmax;
+  }
