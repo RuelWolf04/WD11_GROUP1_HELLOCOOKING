@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HomeCooking-Order</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ========= BOOTSTRAP ========== -->
+    <link rel="stylesheet" href="assets/css/styles/bootstrap.min.css" />
+
+    <!-- ========= FONTAWESOME ========== -->
+    <link rel="stylesheet" href="assets/css/styles/font-awesome.css" />
+
+    <!-- ========= STYLES ========== -->
+    <link rel="stylesheet" href="assets/css/styles/base/nav.css" />
+    <link rel="stylesheet" href="assets/css/styles/root.css" />
+    <link rel="stylesheet" href="assets/css/styles/order.css" />
+    <link rel="stylesheet" href="assets/css/styles/base/footer.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- 
+  
+          HEADER - NAVBAR
+  
+          -->
+      <section class="header-sub-section">
+        <div class="container">
+          <nav class="">
+            <div class="nav__logo-container" aria-label="logo / go-to-hompage">
+              <a href="index.html" tabindex="0">
+                <img
+                  class="nav__logo-img js-nav-logo"
+                  src="assets/imgs/logo/hc-logo.png"
+                  alt="Hello Cooking Logo"
+              /></a>
+            </div>
+
+            <div class="nav__center">
+              <button
+                class="nav__menu-btn open-menu-btn js-nav-menu-open"
+                aria-label="open-menu-button"
+                aria-expanded="false"
+                aria-controls="menu"
+              >
+                <svg
+                  class="ham hamRotate ham1"
+                  viewBox="0 0 100 100"
+                  width="80"
+                  onclick="this.classList.toggle('active')"
+                >
+                  <path
+                    class="line top"
+                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+                  />
+                  <path class="line middle" d="m 30,50 h 40" />
+                  <path
+                    class="line bottom"
+                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+                  />
+                </svg>
+              </button>
+
+              <div class="nav__menu-container js-nav-menu" id="menu">
+                <ul role="menubar" class="nav__menu">
+                  <li class="nav__menu-item">
+                    <a href="index.html" role="menuitem">Home</a>
+                  </li>
+                  <li class="nav__menu-item">
+                    <a href="#" role="menuitem">Order Now</a>
+                  </li>
+                  <li class="nav__menu-item">
+                    <a href="products.html" role="menuitem">Recipes</a>
+                  </li>
+                  <li class="nav__menu-item">
+                    <a href="about.html" role="menuitem">About</a>
+                  </li>
+                  <li class="nav__menu-item">
+                    <a href="contact.html" role="menuitem">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="nav__right">
+              <span><i class="fa-solid fa-magnifying-glass"></i></span>
+              <span><i class="fa-solid fa-cart-shopping"></i></span>
+              <a href="#">Sign In</a>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <!-- end header -->
+    </header>
+
+    <main>
+      <section id="contact-info-section" class="py-5">
+        <div class="container">
+          <form action="" class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="contact-info-left-container">
+                  <div class="cil-line1">
+                    <!-- <form action="" class="needs-validation" novalidate> -->
+                    <h4 class="mb-2">Contact Information</h4>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="email"
+                        placeholder="Example input placeholder"
+                        required
+                      />
+                      <label for="email" class="form-label">Email</label>
+                      <div class="invalid-feedback">
+                        Please input a valid email.
+                      </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="Password..."
+                        required
+                      />
+                      <label for="password" class="form-label">Password</label>
+                      <div class="invalid-feedback">
+                        Please input a stronger password.
+                      </div>
+                    </div>
+                    <!-- </form> -->
+                  </div>
+                  <div class="cil-line2">
+                    <!-- <form action="" class="needs-validation" novalidate> -->
+                    <h4 class="mb-2">Shipping Address</h4>
+                    <div class="mb-3">
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="form-floating">
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="first-name"
+                              id="first-name"
+                              placeholder="First name"
+                              required
+                            />
+                            <label for="firstname" class="form-label"
+                              >First name</label
+                            >
+                            <div class="invalid-feedback">
+                              Please input firstname.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="form-floating">
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="last-name"
+                              id="last-name"
+                              placeholder="Last name"
+                              required
+                            />
+                            <label for="lastname" class="form-label"
+                              >Last name</label
+                            >
+                            <div class="invalid-feedback">
+                              Please input lastname.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 mb-3">
+                          <div class="form-floating">
+                            <input
+                              type="number"
+                              name="number"
+                              id="number"
+                              class="form-control"
+                              placeholder="Phone number"
+                              required
+                            />
+                            <label for="number" class="form-label"
+                              >Phone number</label
+                            >
+                            <div class="invalid-feedback">
+                              Please input number.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <div class="form-floating">
+                            <input
+                              type="text"
+                              name="address"
+                              id="address"
+                              class="form-control"
+                              placeholder="Address"
+                              required
+                            />
+                            <label for="address" class="form-label"
+                              >Address</label
+                            >
+                            <div class="invalid-feedback">
+                              Please input address.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                          <div class="form-floating">
+                            <input
+                              type="text"
+                              name="city"
+                              id="city"
+                              class="form-control"
+                              placeholder="City"
+                              required
+                            />
+                            <label for="city" class="form-label">City</label>
+                            <div class="invalid-feedback">
+                              Please input city.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <a href="#"
+                          ><i
+                            class="fa-solid fa-chevron-left me-1"
+                            style="font-size: 0.775rem"
+                          ></i>
+                          Back</a
+                        >
+                        <button type="submit" class="btn btn-primary ms-auto">
+                          Submit
+                        </button>
+                      </div>
+                    </div>
+                    <!-- </form> -->
+                  </div>
+                  <div class="cil-line3">
+                    <div class="payment-online-type-container">
+                      <img src="assets/imgs/random/payment-type.jpg" alt="" />
+                      <div class="cil-line3-title">
+                        Guaranteed SAFE Checkout
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="contact-info-right-container">
+                  <div class="cir-line1">
+                    <div class="d-flex mb-2">
+                      <a href="" class="btn btn-success ms-auto"
+                        >Change order</a
+                      >
+                    </div>
+                    <div class="step-food-cards">
+                      <div class="step-food-card d-flex">
+                        <div class="img-container">
+                          <img
+                            src="assets/imgs/productImgs/chickenadobo.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="step-food-card-info">
+                          <div class="stars d-flex">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                          </div>
+                          <p class="mb-2">Chicken Adobo</p>
+                          <div class="d-flex justify-content-between">
+                            <span>for 4 persons</span>
+                            <span class="price">₱550.00</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="discount-code-container">
+                        <form action="" class="needs-validation" novalidate>
+                          <!-- <div class="row"> -->
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              name="discount-code"
+                              id="discount-code"
+                              placeholder="Discount code"
+                              class="form-control"
+                              required
+                            />
+                            <!-- <label for="discount-code" class="form-label"
+                              >Discount code</label
+                            > -->
+                            <div class="invalid-feedback">
+                              Please input valid code.
+                            </div>
+                            <button type="submit" class="btn btn-success">
+                              Apply
+                            </button>
+                          </div>
+                          <!-- </div> -->
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cir-line2">
+                    <div class="calculate-total-container">
+                      <div class="d-flex justify-content-between">
+                        <p>Subtotal</p>
+                        <p>₱<span>550.00</span></p>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <p>Shipping</p>
+                        <p>₱<span>50.00</span></p>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <p>Total</p>
+                        <p>₱<span>550.00</span></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cir-line3">
+                    <div class="why-buy-container">
+                      <h5>Why buy from us?</h5>
+                      <p><b>WITH EVERY PURCHASE, YOU MAKE A DIFFERENCE</b></p>
+                      <p>
+                        Your purchase helps every farmers in the Philippines who
+                        supplies us. A mission we are passionate about.
+                      </p>
+                      <div class="d-flex align-items-center mt-2">
+                        <div class="seal-container">
+                          <img
+                            src="assets/imgs/seal/—Pngtree—premium quality organic product badge_7428623.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="seal-info">
+                          <b
+                            >We are certifide organic food producer in the
+                            Philippines</b
+                          >
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Et debitis totam excepturi blanditiis possimus
+                            animi consectetur? Nesciunt sit corporis rem?
+                          </p>
+                        </div>
+                      </div>
+                      <div class="d-flex align-items-center mt-2">
+                        <div class="seal-container">
+                          <img
+                            src="assets/imgs/seal/—Pngtree—rounded best seller emblem with_5299871.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="seal-info">
+                          <b
+                            >We are certifide organic food producer in the
+                            Philippines</b
+                          >
+                          <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Et debitis totam excepturi blanditiis possimus
+                            animi consectetur? Nesciunt sit corporis rem?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- start footer -->
+      <div class="container">
+        <div class="row footer-top">
+          <div class="col-lg-6 col-md-12 footer-right">
+            <div class="footer-right__container">
+              <div class="footer-right__img-container">
+                <img src="assets/imgs/logo/hc-logo.png" alt="" />
+              </div>
+              <p class="text-center">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Tempora soluta quasi dicta repudiandae consequuntur nobis
+                similique, pariatur alias illum laudantium.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 footer-left">
+            <div class="row footer-left__container">
+              <div
+                class="col-lg-4 col-md-4 text-md-center col-sm-12 text-sm-center mt-sm-4 footer-left__first"
+              >
+                <h5>Site</h5>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="products.html">Recipes</a></li>
+                  <li><a href="order.html">Order Now</a></li>
+                </ul>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 text-md-center col-sm-12 text-sm-center mt-sm-4 footer-left__second"
+              >
+                <h5>Helpful</h5>
+                <ul>
+                  <li><a href="#">FAQ's</a></li>
+                  <li><a href="terms.html">Terms</a></li>
+                  <li><a href="career.html">Career</a></li>
+                </ul>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 text-md-center col-sm-12 text-sm-center mt-sm-4 footer-left__third"
+              >
+                <h5>Get in touch</h5>
+                <ul>
+                  <li>
+                    <p>Address:</p>
+                  </li>
+                  <li>
+                    <p>Phone:</p>
+                  </li>
+                  <li class="footer-social-links">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid footer-bottom">
+        <p>Group_1 &copy; HelloCooking</p>
+      </div>
+
+      <!-- end footer -->
+    </footer>
+
+    <!-- ========= BOOTSTRAP JS ========== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========= JS ========== -->
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
