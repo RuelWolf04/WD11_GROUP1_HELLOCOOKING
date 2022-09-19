@@ -53,39 +53,6 @@ carouselBtns.forEach(cBtn => {
 
 
 
-// ----------------faqs
-
-const faq = document.querySelectorAll('.faq')
-
-faq.forEach((item, index) => {
-  let header = item.querySelector("header")
-  header.addEventListener("click", () => {
-    item.classList.toggle("open")
-
-    let faqAnswer = item.querySelector(".answer");
-    if(item.classList.contains("open")){
-      faqAnswer.style.height = `${faqAnswer.scrollHeight}px`
-    } else {
-    faqAnswer.style.height = '0px'
-    }
-    closeFaq(index)
-  })
-})
-
-function closeFaq(index){
-  faq.forEach((otherItem, otherIndex) => {
-    if(otherIndex != index){
-      otherItem.classList.remove('open')
-      let otherAnswer = otherItem.querySelector(".answer")
-      otherAnswer.style.height = '0px';
-    }
-  
-})
-};
-
-
-
-
 
 
 
