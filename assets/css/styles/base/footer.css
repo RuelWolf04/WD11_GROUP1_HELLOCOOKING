@@ -54,3 +54,12 @@ footer {
 
 
 
+
+@media (max-width: 580px){
+  .footer-left__first,
+  .footer-left__second,
+  .footer-left__third {
+    text-align: center;
+    margin-top: 2em;
+  }
+}

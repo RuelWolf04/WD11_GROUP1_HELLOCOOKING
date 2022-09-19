@@ -85,3 +85,12 @@ main {
   bottom: 10px;
   transform: translateX(-50%);
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+  #filteration .btn-name{
+    display: none;
+  }
+}

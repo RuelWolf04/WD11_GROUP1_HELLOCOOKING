@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/styles/root.css" />
     <link rel="stylesheet" href="assets/css/styles/style.css" />
     <link rel="stylesheet" href="assets/css/styles/base/footer.css" />
+    <link rel="stylesheet" href="assets/css/styles/base/modal.css" />
   </head>
   <body class="">
     <header class="header">
@@ -65,7 +66,7 @@
 
               <div class="nav__menu-container js-nav-menu" id="menu">
                 <ul role="menubar" class="nav__menu">
-                  <li class="nav__menu-item">
+                  <li class="nav__menu-item active">
                     <a href="#" role="menuitem">Home</a>
                   </li>
                   <li class="nav__menu-item">
@@ -85,9 +86,13 @@
             </div>
 
             <div class="nav__right">
-              <!-- <button><i class="fa-solid fa-magnifying-glass"></i></button> -->
               <button><i class="fa-solid fa-cart-shopping"></i></button>
-              <button><i class="fa-solid fa-user"></i></button>
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                ><i class="fa-solid fa-user"></i> Login</a
+              >
             </div>
           </nav>
         </div>
@@ -106,9 +111,15 @@
               class="col-lg-5 d-flex flex-column align-items-start justify-content-center"
               id="hero-left"
             >
-              <h1>"A well-stocked pantry is the key to easy and convenient home cooking."</h1>
+              <h1>
+                "A well-stocked pantry is the key to easy and convenient home
+                cooking."
+              </h1>
               <p>
-                There is nothing quite like home-cooked meals, but sometimes we don't have the time or energy to cook from scratch. recipes that are both easy to make and delicious, so you can enjoy a home-cooked meal without all the hassle.
+                There is nothing quite like home-cooked meals, but sometimes we
+                don't have the time or energy to cook from scratch. recipes that
+                are both easy to make and delicious, so you can enjoy a
+                home-cooked meal without all the hassle.
               </p>
               <button id="hero-left-btn">Order Now</button>
             </div>
@@ -124,7 +135,7 @@
                   </div>
                   <div class="hero-slide" data-active>
                     <img
-                      src="assets/imgs/recipes/main-dish/healthybowl (1).png"
+                      src="assets/imgs/recipes/main-dish/healthybowl.png"
                       alt=""
                     />
                   </div>
@@ -174,15 +185,24 @@
             <div class="col-lg-5">
               <article class="card__main">
                 <div class="card__main-content">
-                  <h3>Looking for some healthy and delicious recipes to try out?</h3>
-                  <p>Check out our featured recipes section for some great ideas!</p>
+                  <h3 class="mb-2">
+                    Looking for some healthy and delicious recipes to try out?
+                  </h3>
+                  <p>
+                    Check out our featured recipes section for some great ideas!
+                  </p>
                 </div>
               </article>
             </div>
             <div class="col-lg-6">
               <div class="left-cards">
                 <article class="card">
-                  <img src="assets/imgs/productImgs/grilled-peaches 1.jpg" alt="" />
+                  <div class="left-card-img-container">
+                    <img
+                      src="assets/imgs/productImgs/grilled-peaches 1.jpg"
+                      alt=""
+                    />
+                  </div>
                   <div class="description">
                     <div class="line line1">
                       <h5>Grilled Peaches</h5>
@@ -200,7 +220,12 @@
                   </div>
                 </article>
                 <article class="card">
-                  <img src="assets/imgs/productImgs/rellenong-bangus-recipe 1.jpg" alt="" />
+                  <div class="left-card-img-container">
+                    <img
+                      src="assets/imgs/productImgs/rellenong-bangus-recipe 1.jpg"
+                      alt=""
+                    />
+                  </div>
                   <div class="description">
                     <div class="line line1">
                       <h5>Rellenong Bangus</h5>
@@ -218,7 +243,12 @@
                   </div>
                 </article>
                 <article class="card">
-                  <img src="assets/imgs/productImgs/Pan-Fried-chicken-breast-herowm 1.jpg" alt="" />
+                  <div class="left-card-img-container">
+                    <img
+                      src="assets/imgs/productImgs/Pan-Fried-chicken-breast-herowm 1.jpg"
+                      alt=""
+                    />
+                  </div>
                   <div class="description">
                     <div class="line line1">
                       <h5>Fried Chicken</h5>
@@ -236,7 +266,12 @@
                   </div>
                 </article>
                 <article class="card">
-                  <img src="assets/imgs/productImgs/Vegan-Sisig_0953-768x1024 1.jpg" alt="" />
+                  <div class="left-card-img-container">
+                    <img
+                      src="assets/imgs/productImgs/Vegan-Sisig_0953-768x1024 1.jpg"
+                      alt=""
+                    />
+                  </div>
                   <div class="description">
                     <div class="line line1">
                       <h5>Vegan Sisig</h5>
@@ -254,7 +289,9 @@
                   </div>
                 </article>
                 <article class="card">
-                  <img src="assets/imgs/backgrounds/1.jpg" alt="" />
+                  <div class="left-card-img-container">
+                    <img src="assets/imgs/backgrounds/1.jpg" alt="" />
+                  </div>
                   <div class="description">
                     <div class="line line1">
                       <h5>Tuna Sandwich</h5>
@@ -293,7 +330,8 @@
                 <div class="reason1__left col-8">
                   <h4>Customer Satisfaction</h4>
                   <p>
-                    We provide excellent customer service, offer high-quality products, and continuously improve our operations.
+                    We provide excellent customer service, offer high-quality
+                    products, and continuously improve our operations.
                   </p>
                 </div>
                 <div class="reason1__right reason-right col-4">
@@ -304,7 +342,8 @@
                 <div class="reason1__left col-8 order-lg-last">
                   <h4>Easy Access</h4>
                   <p>
-                    Typically designed for use on mobile devices and are often used for productivity or entertainment purposes.
+                    Typically designed for use on mobile devices and are often
+                    used for productivity or entertainment purposes.
                   </p>
                 </div>
                 <div class="reason1__right reason-right col-4">
@@ -315,7 +354,9 @@
                 <div class="reason1__left col-8">
                   <h4>Healthy</h4>
                   <p>
-                    Healthy and pre-portioned food products are food products that are low in calories, fat, and sugar, and high in nutrients.
+                    Healthy and pre-portioned food products are food products
+                    that are low in calories, fat, and sugar, and high in
+                    nutrients.
                   </p>
                 </div>
                 <div class="reason1__right reason-right col-4">
@@ -326,7 +367,8 @@
                 <div class="reason1__left col-8 order-lg-last">
                   <h4>Fast</h4>
                   <p>
-                    Designed to save you time and hassle, so you can get back to your life.
+                    Designed to save you time and hassle, so you can get back to
+                    your life.
                   </p>
                 </div>
                 <div class="reason1__right reason-right col-4">
@@ -344,18 +386,16 @@
       
       -->
 
-      <section id="comment">
+      <!-- <section id="comment">
         <div class="slide-container">
-          <h3 class="text-center">Cook it. Love it. Tag it #HelloCookingPics</h3>
+          
           <div class="slide-track">
             <div class="slide">
-              <img
-                src="assets/imgs/comments/pexels-photo-6073633.jpeg"
-                alt=""/>
+              
               <div class="user-comment">
-                <h4>Claire_Princess29</h4>
+                <h4></h4>
                 <p>
-                  I'm all about convenience and ease when it comes to food, so I was really happy to find out that I could order healthy food online. It's super easy and convenient, and I love knowing that I'm eating healthy meals.
+                  
                 </p>
               </div>
             </div>
@@ -367,267 +407,397 @@
               <div class="user-comment">
                 <h4>Nick_06</h4>
                 <p>
-                  I'm all about convenience and ease when it comes to food, so I was really happy to find out that I could order healthy food online. It's super easy and convenient, and I love knowing that I'm eating healthy meals.
+                  I'm all about convenience and ease when it comes to food, so I
+                  was really happy to find out that I could order healthy food
+                  online. It's super easy and convenient, and I love knowing
+                  that I'm eating healthy meals.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/pexels-photo-7677953.webp"
-                alt=""
-              />
+              
               <div class="user-comment">
-                <h4>myFamily_Rules562</h4>
-                <p>I'm really happy with how easy it is to order healthy food online. The process is so convenient and the food is always fresh and delicious.</p>
-              </div>
-            </div>
-            <div class="slide">
-              <img
-                src="assets/imgs/comments/pexels-photo-6073633.jpeg"
-                alt=""
-              />
-              <div class="user-comment">
-                <h4>twinningsis</h4>
+                <h4></h4>
                 <p>
-                  I really appreciate being able to order healthy food online. It's so easy and convenient, and I know that I'm getting quality ingredients that are good for me.
+                  
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/istockphoto-1407077518-170667a.jpg"
-                alt=""
-              />
+              
+              <div class="user-comment">
+                <h4></h4>
+                <p>
+                  
+                </p>
+              </div>
+            </div>
+            <div class="slide">
+              
               <div class="user-comment">
                 <h4>alessissy</h4>
                 <p>
-                  I'm all about ordering healthy food because it's easy and convenient. No more guessing what's in my food or if it's going to be satisfying.
+                  I'm all about ordering healthy food because it's easy and
+                  convenient. No more guessing what's in my food or if it's
+                  going to be satisfying.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (1).jpg"
-                alt=""
-              />
+              <img src="assets/imgs/comments/peopleeating (1).jpg" alt="" />
               <div class="user-comment">
                 <h4>gurubeing_healthy</h4>
                 <p>
-                  It makes it much easier to stay on track with my diet and I feel better overall when I am eating healthy. I really appreciate being able to order healthy food that is easy and convenient. 
+                  It makes it much easier to stay on track with my diet and I
+                  feel better overall when I am eating healthy. I really
+                  appreciate being able to order healthy food that is easy and
+                  convenient.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (2).jpg"
-                alt=""
-              />
+              <img src="assets/imgs/comments/peopleeating (2).jpg" alt="" />
               <div class="user-comment">
                 <h4>kapish452851</h4>
                 <p>
-                  It makes it possible for me to eat healthily without having to cook everything myself.
+                  It makes it possible for me to eat healthily without having to
+                  cook everything myself.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (3).jpg"
-                alt=""
-              />
+              <img src="assets/imgs/comments/peopleeating (3).jpg" alt="" />
               <div class="user-comment">
                 <h4>liteaboutlight</h4>
                 <p>
-                  I don't have to worry about what I'm going to eat for lunch or dinner because I can just order something healthy and have it delivered to my door.
+                  I don't have to worry about what I'm going to eat for lunch or
+                  dinner because I can just order something healthy and have it
+                  delivered to my door.
                 </p>
               </div>
             </div>
             <!-- half -->
-            <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (4).jpg"
-                alt=""
-              />
+      <!-- <div class="slide">
+              <img src="assets/imgs/comments/peopleeating (4).jpg" alt="" />
               <div class="user-comment">
                 <h4>officemanic</h4>
                 <p>
-                  I'm all about eating healthy and this makes it so easy and convenient. No more excuses!
+                  I'm all about eating healthy and this makes it so easy and
+                  convenient. No more excuses!
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (5).jpg"
-                alt=""
-              />
+              <img src="assets/imgs/comments/peopleeating (5).jpg" alt="" />
               <div class="user-comment">
                 <h4>healthis_greaty</h4>
                 <p>
-                  I don't have to worry about going to the grocery store and trying to find healthy food options.
+                  I don't have to worry about going to the grocery store and
+                  trying to find healthy food options.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (6).jpg"
-                alt=""
-              />
+              <img src="assets/imgs/comments/peopleeating (6).jpg" alt="" />
               <div class="user-comment">
                 <h4>mrhealthyiswelath</h4>
                 <p>
-                  Pre-portioned healthy food is an easy and convenient way to get the nutrients you need without having to cook or prepare meals yourself. The food is typically delivered to your door, and you can choose from a variety of options to fit your dietary needs.
+                  Pre-portioned healthy food is an easy and convenient way to
+                  get the nutrients you need without having to cook or prepare
+                  meals yourself. The food is typically delivered to your door,
+                  and you can choose from a variety of options to fit your
+                  dietary needs.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (7).jpg"
-                alt=""
-              />
+              <img src="assets/imgs/comments/peopleeating (7).jpg" alt="" />
               <div class="user-comment">
                 <h4>notosayyes_54255</h4>
                 <p>
-                  I really appreciate being able to order pre-portioned healthy food. It's so easy and convenient, and it helps me make better choices for my health.
+                  I really appreciate being able to order pre-portioned healthy
+                  food. It's so easy and convenient, and it helps me make better
+                  choices for my health.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (8).jpg"
-                alt=""
-              />
+              <img src="assets/imgs/comments/peopleeating (8).jpg" alt="" />
               <div class="user-comment">
                 <h4>huppibussy2546</h4>
                 <p>
-                  I love being able to order pre-portioned healthy food. It's so easy and convenient, and it helps me make better choices for my body.
+                  I love being able to order pre-portioned healthy food. It's so
+                  easy and convenient, and it helps me make better choices for
+                  my body.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (9).jpg"
-                alt=""
-              />
+              <img src="assets/imgs/comments/peopleeating (9).jpg" alt="" />
               <div class="user-comment">
                 <h4>instagrammableme5668</h4>
                 <p>
-                  Pre-portioned healthy food is an easy and convenient way to make sure you're getting the right amount of nutrients. It's also a great way to save time in the kitchen.
+                  Pre-portioned healthy food is an easy and convenient way to
+                  make sure you're getting the right amount of nutrients. It's
+                  also a great way to save time in the kitchen.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (10).jpg"
-                alt=""
-              />
+              
               <div class="user-comment">
-                <h4>letsgowiththehealthhype5468</h4>
+                <h4></h4>
                 <p>
-                  I love being able to order pre-portioned healthy food! It's so easy and convenient, and I know that I'm getting exactly what I need to stay healthy.
+                  
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img
-                src="assets/imgs/comments/peopleeating (11).jpg"
-                alt=""
-              />
+              
               <div class="user-comment">
-                <h4>_fambamhealth5185</h4>
+                <h4></h4>
                 <p>
-                  Pre-portioned food is easy and convenient to order. It eliminates food waste and is a great way to manage your food budget.
+                  
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section id="comment-section" class="">
+        <div class="container-fluid">
+          <h3 class="text-center mb-5">
+            Cook it. Love it. Tag it #HelloCookingPics
+          </h3>
+          <div class="comment-slider-container">
+            <div class="comment-slider-track">
+              <div class="comment-card">
+                <div class="comment-img-contain">
+                  <img
+                    src="assets/imgs/comments/pexels-photo-8507636.jpeg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="name">Hidalgo Family</span>
+                  <span class="hash">#HelloCookingPics</span>
+                  <p>
+                    Pre-portioned food is easy and convenient to order. It
+                    eliminates food waste and is a great way to manage your food
+                    budget.
+                  </p>
+                </div>
+              </div>
+
+              <div class="comment-card">
+                <div class="comment-img-contain">
+                  <img
+                    src="assets/imgs/comments/istockphoto-1407077518-170667a.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="name">Claire_Princess29</span>
+                  <span class="hash">#HelloCookingPics</span>
+                  <p>
+                    I'm all about convenience and ease when it comes to food, so
+                    I was really happy to find out that I could order healthy
+                    food online. It's super easy and convenient, and I love
+                    knowing that I'm eating healthy meals.
+                  </p>
+                </div>
+              </div>
+
+              <div class="comment-card">
+                <div class="comment-img-contain">
+                  <img
+                    src="assets/imgs/comments/pexels-photo-7677953.webp"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="name">myFamily_Rules562</span>
+                  <span class="hash">#HelloCookingPics</span>
+                  <p>
+                    I'm really happy with how easy it is to order healthy food
+                    online. The process is so convenient and the food is always
+                    fresh and delicious.
+                  </p>
+                </div>
+              </div>
+
+              <div class="comment-card">
+                <div class="comment-img-contain">
+                  <img
+                    src="assets/imgs/comments/pexels-photo-6073633.jpeg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="name">twinningsis</span>
+                  <span class="hash">#HelloCookingPics</span>
+                  <p>
+                    I really appreciate being able to order healthy food online.
+                    It's so easy and convenient, and I know that I'm getting
+                    quality ingredients that are good for me.
+                  </p>
+                </div>
+              </div>
+
+              <div class="comment-card">
+                <div class="comment-img-contain">
+                  <img
+                    src="assets/imgs/comments/peopleeating (11).jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-body">
+                  <span class="name">_fambamhealth5185</span>
+                  <span class="hash">#HelloCookingPics</span>
+                  <p>
+                    Pre-portioned food is easy and convenient to order. It
+                    eliminates food waste and is a great way to manage your food
+                    budget.
+                  </p>
+                </div>
+              </div>
+
+              <div class="comment-card">
+                <div class="comment-img-contain">
+                  <img src="assets/imgs/comments/peopleeating (1).jpg" alt="" />
+                </div>
+                <div class="card-body">
+                  <span class="name">letsgowiththehealthhype5468</span>
+                  <span class="hash">#HelloCookingPics</span>
+                  <p>
+                    I love being able to order pre-portioned healthy food! It's
+                    so easy and convenient, and I know that I'm getting exactly
+                    what I need to stay healthy.
+                  </p>
+                </div>
+              </div>
+
+              <!--  -->
             </div>
           </div>
         </div>
       </section>
 
       <!-- 
-
         MAIN - FAQS
-
       -->
-      <section id="faq-section">
+      <section id="faq">
         <div class="container">
-          <div class="faq-section-left">
-            <img src="assets/imgs/recipes/main-dish/japanese.png" alt="" />
-          </div>
-          <div class="faqs-container">
-            <h4 id="faq-section-title">Frequently Ask Questions</h4>
-            <div class="faq">
-              <header class="d-flex justify-content-between">
-                <span class="title">What inspired you to create a company that offers healthy food delivery?</span>
-                <i class="fa-solid fa-caret-right"></i>
-              </header>
-              <div class="answer">
+          <h3 class="text-center mb-4">Frequently Ask Questions</h3>
+          <div class="faq-accordion">
+            <div class="faq-qa">
+              <input type="checkbox" name="question" id="question1" checked />
+              <label for="question1"
+                >What inspired you to create a company that offers healthy food
+                delivery?
+                <i class="fa-solid fa-plus"></i>
+              </label>
+              <div class="faq-answer-container">
                 <p>
-                  I was inspired to create this company because I was tired of eating unhealthy food. I wanted to make a difference in the world by providing healthy food to people who want to live a healthy lifestyle.
+                  I was inspired to create this company because I was tired of
+                  eating unhealthy food. I wanted to make a difference in the
+                  world by providing healthy food to people who want to live a
+                  healthy lifestyle.
                 </p>
               </div>
             </div>
-            <div class="faq">
-              <header class="d-flex justify-content-between">
-                <span class="title">What sets your company apart from other food delivery companies?</span>
-                <i class="fa-solid fa-caret-right"></i>
-              </header>
-              <div class="answer">
+
+            <div class="faq-qa">
+              <input type="checkbox" name="question" id="question2" />
+              <label for="question2"
+                >What sets your company apart from other food delivery
+                companies?
+                <i class="fa-solid fa-plus"></i>
+              </label>
+              <div class="faq-answer-container">
                 <p>
-                  Our company is unique because we offer healthy food options that are pre-portioned and come with one-of-a-kind recipes.
+                  Our company is unique because we offer healthy food options
+                  that are pre-portioned and come with one-of-a-kind recipes.
                 </p>
               </div>
             </div>
-            <div class="faq">
-              <header class="d-flex justify-content-between">
-                <span class="title">What are some of the unique features of your company?</span>
-                <i class="fa-solid fa-caret-right"></i>
-              </header>
-              <div class="answer">
+
+            <div class="faq-qa">
+              <input type="checkbox" name="question" id="question3" />
+              <label for="question3"
+                >What are some of the unique features of your company?
+                <i class="fa-solid fa-plus"></i>
+              </label>
+              <div class="faq-answer-container">
                 <p>
-                  We offer a unique recipe service that is pre-portioned and easy to use. Our customers are always our top priority and we work hard to ensure their satisfaction. Our website is fast and easy to use, making it a great resource for busy families.
+                  We offer a unique recipe service that is pre-portioned and
+                  easy to use. Our customers are always our top priority and we
+                  work hard to ensure their satisfaction. Our website is fast
+                  and easy to use, making it a great resource for busy families.
                 </p>
               </div>
             </div>
-            <div class="faq">
-              <header class="d-flex justify-content-between">
-                <span class="title">Why do you believe that healthy food delivery is important?</span>
-                <i class="fa-solid fa-caret-right"></i>
-              </header>
-              <div class="answer">
+
+            <div class="faq-qa">
+              <input type="checkbox" name="question" id="question4" />
+              <label for="question4"
+                >Why do you believe that healthy food delivery is important?
+                <i class="fa-solid fa-plus"></i>
+              </label>
+              <div class="faq-answer-container">
                 <p>
-                  There are a few reasons why healthy food delivery is important. First, it can help people who are unable to cook for themselves or do not have time to prepare meals. Second, it can help people who have dietary restrictions or are on special diets. Third, it can help people who live in areas where there are not many healthy food options.
+                  There are a few reasons why healthy food delivery is
+                  important. First, it can help people who are unable to cook
+                  for themselves or do not have time to prepare meals. Second,
+                  it can help people who have dietary restrictions or are on
+                  special diets. Third, it can help people who live in areas
+                  where there are not many healthy food options.
                 </p>
               </div>
             </div>
-            <div class="faq">
-              <header class="d-flex justify-content-between">
-                <span class="title">How long does it take for the delivery?</span>
-                <i class="fa-solid fa-caret-right"></i>
-              </header>
-              <div class="answer">
+
+            <div class="faq-qa">
+              <input type="checkbox" name="question" id="question5" />
+              <label for="question5"
+                >How long does it take for the delivery?
+                <i class="fa-solid fa-plus"></i>
+              </label>
+              <div class="faq-answer-container">
                 <p>
-                  The delivery will take at least 5 hours from placing depending on the location you are located and the delivery channel you used.
+                  The delivery will take at least 5 hours from placing depending
+                  on the location you are located and the delivery channel you
+                  used.
                 </p>
               </div>
             </div>
-            <div class="faq">
-              <header class="d-flex justify-content-between">
-                <span class="title">How do I know if my order is delivered?</span>
-                <i class="fa-solid fa-caret-right"></i>
-              </header>
-              <div class="answer">
+
+            <div class="faq-qa">
+              <input type="checkbox" name="question" id="question6" />
+              <label for="question6"
+                >How do I know if my order is delivered?
+                <i class="fa-solid fa-plus"></i>
+              </label>
+              <div class="faq-answer-container">
                 <p>
-                  You will receive an email or text confirmation once the order has been delivered!
+                  You will receive an email or text confirmation once the order
+                  has been delivered!
                 </p>
               </div>
             </div>
-            <div class="faq">
-              <header class="d-flex justify-content-between">
-                <span class="title">Will I get a refund for a missing, damaged and poor quality items?</span>
-                <i class="fa-solid fa-caret-right"></i>
-              </header>
-              <div class="answer">
+
+            <div class="faq-qa">
+              <input type="checkbox" name="question" id="question7" />
+              <label for="question7"
+                >Will I get a refund for a missing, damaged and poor quality
+                items?
+                <i class="fa-solid fa-plus"></i>
+              </label>
+              <div class="faq-answer-container">
                 <p>
-                  If an item is confirmed to be missing, damaged and/or poor quality from your order, you may send us a message on help@hellocooking.com and on our social media accounts.
+                  If an item is confirmed to be missing, damaged and/or poor
+                  quality from your order, you may send us a message on
+                  help@hellocooking.com and on our social media accounts.
                 </p>
               </div>
             </div>
@@ -636,9 +806,7 @@
       </section>
 
       <!-- 
-
         MAIN - CONTACT
-
       -->
 
       <section id="contact-section"></section>
@@ -717,6 +885,90 @@
 
       <!-- end footer -->
     </footer>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-light" id="staticBackdropLabel">
+              HelloCooking
+            </h1>
+            <button
+              type="button"
+              class="btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <img src="assets/imgs/icon/forKnife-red.png" alt="" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 class="mb-2">Login</h5>
+            <form class="needs-validation" novalidate>
+              <div class="mb-3 form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Email or Username"
+                  required
+                />
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email or Username</label
+                >
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+                <div class="invalid-feedback">
+                  Please input Username or Email.
+                </div>
+              </div>
+              <div class="mb-3 form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                  required
+                />
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <div class="invalid-feedback">Please input password.</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Remember Me</label
+                  >
+                </div>
+                <a href="#">Forgot Password</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 mb-3">
+                Submit
+              </button>
+            </form>
+            <div class="text-center">
+              Don't have an account yet? <a href="signup.html">Sign in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ========= BOOTSTRAP JS ========== -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>

@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/styles/root.css" />
     <link rel="stylesheet" href="assets/css/styles/products.css" />
     <link rel="stylesheet" href="assets/css/styles/base/footer.css" />
+    <link rel="stylesheet" href="assets/css/styles/base/modal.css" />
   </head>
 
   <body>
@@ -48,7 +49,6 @@
                 <svg
                   class="ham hamRotate ham1"
                   viewBox="0 0 100 100"
-                  width="80"
                   onclick="this.classList.toggle('active')"
                 >
                   <path
@@ -71,7 +71,7 @@
                   <li class="nav__menu-item">
                     <a href="order.html" role="menuitem">Order Now</a>
                   </li>
-                  <li class="nav__menu-item">
+                  <li class="nav__menu-item active">
                     <a href="#" role="menuitem">Recipes</a>
                   </li>
                   <li class="nav__menu-item">
@@ -85,9 +85,13 @@
             </div>
 
             <div class="nav__right">
-              <span><i class="fa-solid fa-magnifying-glass"></i></span>
-              <span><i class="fa-solid fa-cart-shopping"></i></span>
-              <a href="#">Sign In</a>
+              <button><i class="fa-solid fa-cart-shopping"></i></button>
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                ><i class="fa-solid fa-user"></i> Login</a
+              >
             </div>
           </nav>
         </div>
@@ -96,587 +100,6 @@
       <!-- end header -->
     </header>
 
-    <!-- <main>
-      <div class="container d-flex flex-row">
-        <div class="bg-primary">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/chickenafritada.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Chicken Afritada</h3>
-              <br />
-              <p class="card-text">
-                Classic Filipino stew made of chicken, braised in tomato sauce
-                with potatoes, carrots, and bell peppers
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-danger">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/chickenadobo.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Chicken Adobo</h3>
-              <br />
-              <p class="card-text">
-                A Philippine dish of chicken usually marinated in a sauce
-                containing vinegar and garlic, browned in fat, and simmered in
-                the marinade.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/eggplantbake.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Eggplant with Black Beans Pasta</h3>
-              <br />
-              <p class="card-text">
-                To add some body, black beans make this great vegetarian dish
-                delicious! Served over pasta, top with parmesan cheese.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-primary">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/eggplantparmesan.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Low-Fat Eggplant Parmesan</h3>
-              <br />
-              <p class="card-text">
-                An Italian dish made up of slices of eggplant that are coated in
-                flour, breadcrumbs, and then baked in layers of rich marinara
-                and melted cheese!
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="container d-flex flex-row">
-        <div class="bg-primary">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/eggplantlasagna.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">
-                Eggplant Bake with Peppers and Mushrooms
-              </h3>
-              <br />
-              <p class="card-text">
-                Made with eggplant, ricotta, peppers and mushrooms, just one
-                slice of this impressive dish will satisfy your appetite.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-danger">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/broildetilapia.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Broiled Tilapia Parmesan</h3>
-              <br />
-              <p class="card-text">
-                Delicious and quick, this dish is a great way to get more fish
-                into your healthy meal plan! We think this baked tilapia recipe
-                can't be beat!
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/strawberryspinach.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Strawberry Spinach Salad</h3>
-              <br />
-              <p class="card-text">
-                Crisp spinach, crunchy almonds and juicy strawberries are a
-                perfect combination in this healthy salad. Top it with grilled
-                chicken for extra protein.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/spagettisquash.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Spaghetti Squash</h3>
-              <br />
-              <p class="card-text">
-                Roasted spaghetti squash, drizzled with a little olive oil, a
-                sprinkling of salt, pepper, garlic poweder, parsley and then
-                tossed with freshly grated parmesan cheese.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="container d-flex flex-row">
-        <div class="bg-primary">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/panfriedchicken.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Pan-Fried Chicken</h3>
-              <br />
-              <p class="card-text">
-                A chicken that is cooked in a skillet, coated with root beer and
-                spices, then finished off on the grill. This dish tastes great
-                any time of day.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-danger">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/grilledpeach.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Grilled Peaches with Raspberries</h3>
-              <br />
-              <p class="card-text">
-                The sweet flavor of grilled peaches with a fresh raspberry glaze
-                will get you started on summer! A simple Sunday afternoon treat
-                that's great for picnics and dinner parties.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/plumcake.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Low Calorie Plum cake</h3>
-              <br />
-              <p class="card-text">
-                This fruit based cake is made without any butter and with few
-                ingredients. The plums can be replaced with any of your favorite
-                fruits such as peaches, apples, cherries and prunes. Try this
-                with a spoonful of none dairy whipping cream and you will be in
-                heaven!
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/bananafoster.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Faux Bananas Foster</h3>
-              <br />
-              <p class="card-text">
-                This creamy and delicious banana-flavored frozen treat is a
-                satisfying dessert for any time of the year.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="container d-flex flex-row">
-        <div class="bg-primary">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/avocadocorn.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Bean, Corn & Avocado Salad</h3>
-              <br />
-              <p class="card-text">
-                This salad is always a hit at parties! Use as a fiber-rich dip,
-                or eat it by itself. It contains beans, corn and avocados which
-                are great sources of fiber and protein.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-danger">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/fishstew.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Italian-Style Fish Stew</h3>
-              <br />
-              <p class="card-text">
-                This Italian-style fish stew is a real delight. Simple, rustic
-                and full of the classic Mediterranean flavors you love from
-                Italy. Serve it up with some crusty bread and garnish with fresh
-                basil.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/fruitpizza.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Fruit Pizza</h3>
-              <br />
-              <p class="card-text">
-                This easy-to-make fruit pizza is made with a sweet sugar cookie
-                crust and a layer of fresh fruit. It's the perfect way to enjoy
-                fresh summer berries, like raspberries or strawberries – plus
-                you can use frozen berries if they are in season.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/guiltfreechococheesecake.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">
-                Low-Sugar Chocolate-Cheesecake Protein Pudding
-              </h3>
-              <br />
-              <p class="card-text">
-                The summer is here and so is this delicious chocolate-cheesecake
-                protein pudding. This magic dessert can be made with so many
-                different flavors and textures—try chocolate, vanilla,
-                pistachio—the sky’s the limit! Plus, it has 19 grams of protein
-                in just one serving!
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="container d-flex flex-row">
-        <div class="bg-primary">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/quinoa.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Quinoa with Spinach and Feta Cheese</h3>
-              <br />
-              <p class="card-text">
-                This quinoa with spinach and feta cheese is a delicious meal or
-                side dish. It's easy to make and can be made in the oven or on
-                the stovetop.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-danger">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/pichosdepollo.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">
-                Puerto Rican pollo pinchos (chicken kebabs)
-              </h3>
-              <br />
-              <p class="card-text">
-                A Puerto Rican dish that is perfect for you to serve at home or
-                bring to a cookout. The kebabs are great served with delicious
-                Puerto Rican arroz mamposteao (beans and rice)
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/picodegallo.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">
-                Pico de Gallo - Authentic Mexican Salsa
-              </h3>
-              <br />
-              <p class="card-text">
-                This Mexican pico de gallo salsa is incredibly versatile in
-                every way. You can put it on grilled chicken or steak, add it to
-                eggs, or serve with tortilla chips. Roast your tomatoes and you
-                will have a great tomato flavor!
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/pulledpork.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Slow Cooker BBQ Pulled Pork Roast</h3>
-              <br />
-              <p class="card-text">
-                This is a tangy BBQ sauce that you can use for pulled pork in
-                the slow cooker. The recipe is simple and easy to follow. This
-                can be used as a sandwich spread, or even with rice.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <div class="container d-flex flex-row">
-        <div class="bg-primary">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/vegansisig.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Vegan Sisig</h3>
-              <br />
-              <p class="card-text">
-                This vegan version of Sisig is so authentic and delicious,
-                you’ll be surprised! Toss it with some sizzling hot crispy or
-                soft rice noodles or bibimbap rice, and top it off with an extra
-                kick of diced green chilies for just the right amount of heat.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-danger">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/rellenongbang.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Rellenong Bangus</h3>
-              <br />
-              <p class="card-text">
-                This made with fresh milkfish meat, vegetable, and spices. It is
-                baked in the oven to be crispy and tasty.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/steak.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Marsala Steak with Mushrooms Remix</h3>
-              <br />
-              <p class="card-text">
-                This delicious version of our popular steak and mushroom dish is
-                prepared with a bit of wine to add an elegant touch. Serve over
-                a bed of steamed spinach or garlic mashed potatoes.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-        <div class="bg-warning">
-          <div class="card">
-            <img
-              src="assets/imgs/productImgs/tunasandwich.png"
-              alt=""
-              card="card-img-top"
-            />
-            <div class="card-body">
-              <h3 class="card-title">Tangy Tuna Salad Sandwich</h3>
-              <br />
-              <p class="card-text">
-                This tuna salad is filled with olive oil, vinegar and lemon.
-              </p>
-              <h5>Food Type to order:</h5>
-              <button class="btn btn-primary">Ready-to-Eat</button>
-              <br />
-              <br />
-              <button class="btn btn-primary">Ready-to-Cook</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main> -->
     <main>
       <div class="container" id="filteration">
         <div class="d-flex gap-2">
@@ -707,16 +130,14 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/Healthy-Adobo-Recipe-HN857-iStock629557450-Sized 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/Healthy-Adobo-Recipe-HN857-iStock629557450-Sized 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Lite Adobo</h5>
-                    <p class="card-text">
-                      Tangy Chicken in Garlic Sauce
-                    </p>
-                    <p class="card-text">
-                      30 minutes | Calories: 134.5
-                    </p>
+                    <p class="card-text">Tangy Chicken in Garlic Sauce</p>
+                    <p class="card-text">30 minutes | Calories: 134.5</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -730,9 +151,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Traditional Chicken Afritada</h5>
                     <p class="card-text">with Organic Tomato Sauce</p>
-                    <p class="card-text">
-                      15 minutes | Calories: 504.7
-                    </p>
+                    <p class="card-text">15 minutes | Calories: 504.7</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -745,12 +164,8 @@
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Broiled Tilapia</h5>
-                    <p class="card-text">
-                      in Oozing Parmesan Cheese
-                    </p>
-                    <p class="card-text">
-                      30 minutes | Calories: 177.1
-                    </p>
+                    <p class="card-text">in Oozing Parmesan Cheese</p>
+                    <p class="card-text">30 minutes | Calories: 177.1</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -759,16 +174,16 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/Pan-Fried-chicken-breast-herowm 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/Pan-Fried-chicken-breast-herowm 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Fried Chicken</h5>
                     <p class="card-text" id="sub">
                       Pan-fried with small amount of fat
                     </p>
-                    <p class="card-text">
-                      15 minutes | Calories: 183.1
-                    </p>
+                    <p class="card-text">15 minutes | Calories: 183.1</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -781,36 +196,30 @@
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Marsala Steak</h5>
-                    <p class="card-text">
-                      with Mushrooms Remix
-                    </p>
-                    <p class="card-text">
-                      15 minutes | Calories: 242.4
-                    </p>
+                    <p class="card-text">with Mushrooms Remix</p>
+                    <p class="card-text">15 minutes | Calories: 242.4</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
               </div>
-
-
             </div>
-            <br>
+            <br />
             <div
               class="row row-cols-1 row-cols-lg-5 row-cols-md-3 row-cols-sm-3 g-2"
             >
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/Vegan-Sisig_0953-768x1024 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/Vegan-Sisig_0953-768x1024 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Vegan Sisig</h5>
                     <p class="card-text" id="sub">
                       Marinated Shitake, Beech and Oyster Mushrooms
                     </p>
-                    <p class="card-text">
-                      20 minutes | Calories: 174
-                    </p>
+                    <p class="card-text">20 minutes | Calories: 174</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -819,14 +228,16 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/rellenong-bangus-recipe 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/rellenong-bangus-recipe 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Rellenong Bangus</h5>
-                    <p class="card-text" id="sub">Marinated in soy sauce and lemon juice</p>
-                    <p class="card-text">
-                      15 minutes | Calories: 117
+                    <p class="card-text" id="sub">
+                      Marinated in soy sauce and lemon juice
                     </p>
+                    <p class="card-text">15 minutes | Calories: 117</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -835,16 +246,16 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/Pinchos-de-Pollo-Puerto-Rican-chicken-pinchos-recipe-9-720x720 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/Pinchos-de-Pollo-Puerto-Rican-chicken-pinchos-recipe-9-720x720 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
-                    <h5 class="card-title">Puerto Rican Pollo Pinchos </h5>
+                    <h5 class="card-title">Puerto Rican Pollo Pinchos</h5>
                     <p class="card-text" id="sub">
                       marinated in fresh herbs chicken kebabs
                     </p>
-                    <p class="card-text">
-                      30 minutes | Calories: 177.1
-                    </p>
+                    <p class="card-text">30 minutes | Calories: 177.1</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -860,9 +271,7 @@
                     <p class="card-text" id="sub">
                       cooked in Organic Tomato Sauce and fresh herbs
                     </p>
-                    <p class="card-text">
-                      21 minutes | Calories: 436
-                    </p>
+                    <p class="card-text">21 minutes | Calories: 436</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -878,14 +287,11 @@
                     <p class="card-text" id="sub">
                       with Organic Peppers and Mushrooms
                     </p>
-                    <p class="card-text">
-                      60 minutes | Calories: 192.2
-                    </p>
+                    <p class="card-text">60 minutes | Calories: 192.2</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
 
@@ -897,16 +303,16 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/pexels-marko-rick-1684376 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/pexels-marko-rick-1684376 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Strawberry Spinach Salad</h5>
                     <p class="card-text" id="sub">
                       with Fresh Lemons and Poppy Seeds
                     </p>
-                    <p class="card-text">
-                      10 minutes | Calories: 68.4
-                    </p>
+                    <p class="card-text">10 minutes | Calories: 68.4</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -915,14 +321,14 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/Garlic-Parmesan-Spaghetti-Squash-900-x-680 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/Garlic-Parmesan-Spaghetti-Squash-900-x-680 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Spaghetti Squash</h5>
                     <p class="card-text">in Garlic Parmesan</p>
-                    <p class="card-text">
-                      25 minutes | Calories: 175.2
-                    </p>
+                    <p class="card-text">25 minutes | Calories: 175.2</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -931,16 +337,16 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/6345ee75-9e1a-4743-93f7-a89307b6e806 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/6345ee75-9e1a-4743-93f7-a89307b6e806 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Low-Fat Eggplant Parmesan</h5>
                     <p class="card-text" id="sub">
                       with Mozzarella and Parmesan Cheese
                     </p>
-                    <p class="card-text">
-                      50 minutes | Calories: 223.3
-                    </p>
+                    <p class="card-text">50 minutes | Calories: 223.3</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -956,9 +362,7 @@
                     <p class="card-text" id="sub">
                       with Black Beans and fresh Tomatoes
                     </p>
-                    <p class="card-text">
-                      20 minutes | Calories: 89.1
-                    </p>
+                    <p class="card-text">20 minutes | Calories: 89.1</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -971,36 +375,30 @@
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Pico de Gallo</h5>
-                    <p class="card-text">
-                      Authentic Mexican Salsa
-                    </p>
-                    <p class="card-text">
-                      10 minutes | Calories: 22.5
-                    </p>
+                    <p class="card-text">Authentic Mexican Salsa</p>
+                    <p class="card-text">10 minutes | Calories: 22.5</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
               </div>
-
-
             </div>
-            <br>
+            <br />
             <div
               class="row row-cols-1 row-cols-lg-5 row-cols-md-3 row-cols-sm-3 g-2"
             >
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/Avocado-Corn-Bean-Salad-Fifteen-Spatulas-7 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/Avocado-Corn-Bean-Salad-Fifteen-Spatulas-7 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Bean Salad</h5>
                     <p class="card-text" id="sub">
                       with Fresh Beans, Corn, Avocado and Tomatoes
                     </p>
-                    <p class="card-text">
-                      5 minutes | Calories: 174
-                    </p>
+                    <p class="card-text">5 minutes | Calories: 174</p>
                     <button type="btn" id="card-btn">185.3</button>
                   </div>
                 </div>
@@ -1013,10 +411,10 @@
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Tuna Sandwich</h5>
-                    <p class="card-text" id="sub">Tangy Tuna Salad Sandwich with feta cheese</p>
-                    <p class="card-text">
-                      15 minutes | Calories: 259.63
+                    <p class="card-text" id="sub">
+                      Tangy Tuna Salad Sandwich with feta cheese
                     </p>
+                    <p class="card-text">15 minutes | Calories: 259.63</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -1025,16 +423,14 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/quinoa-spinach-salad-tomatoes-feta-recipe-3 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/quinoa-spinach-salad-tomatoes-feta-recipe-3 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Spinach Salad</h5>
-                    <p class="card-text">
-                      with Quinoa and feta cheese
-                    </p>
-                    <p class="card-text">
-                      15 minutes | Calories: 232.8
-                    </p>
+                    <p class="card-text">with Quinoa and feta cheese</p>
+                    <p class="card-text">15 minutes | Calories: 232.8</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -1048,16 +444,13 @@
                   <div class="card-body">
                     <h5 class="card-title">Pulled-Mushroom-Sandwich</h5>
                     <p class="card-text" id="sub">
-                      tenderized and barbequed mushrooms 
+                      tenderized and barbequed mushrooms
                     </p>
-                    <p class="card-text">
-                      15 minutes | Calories: 232.8
-                    </p>
+                    <p class="card-text">15 minutes | Calories: 232.8</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
 
@@ -1069,16 +462,16 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/Bananas-Foster-Cheesecake 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/Bananas-Foster-Cheesecake 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Faux Bananas Foster</h5>
                     <p class="card-text" id="sub">
                       with Honey, Cinnamon and Yoghurt
                     </p>
-                    <p class="card-text">
-                      5 minutes | Calories: 143.4
-                    </p>
+                    <p class="card-text">5 minutes | Calories: 143.4</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -1087,14 +480,16 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/Yogurt-Plum-Cake-Feature 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/Yogurt-Plum-Cake-Feature 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Low Calorie Plum cake</h5>
-                    <p class="card-text" id="sub">with Sour Cream, Yoghurt and Fresh Plums</p>
-                    <p class="card-text">
-                      40 minutes | Calories: 120
+                    <p class="card-text" id="sub">
+                      with Sour Cream, Yoghurt and Fresh Plums
                     </p>
+                    <p class="card-text">40 minutes | Calories: 120</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -1110,9 +505,7 @@
                     <p class="card-text" id="sub">
                       Grilled to perfection, topped with raspberries
                     </p>
-                    <p class="card-text">
-                      17 minutes | Calories: 69.3
-                    </p>
+                    <p class="card-text">17 minutes | Calories: 69.3</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -1121,16 +514,16 @@
               <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/chocolate-cheesecake 1.jpg" />
+                    <img
+                      src="assets/imgs/productImgs/chocolate-cheesecake 1.jpg"
+                    />
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">Chocolate-Cheesecake</h5>
                     <p class="card-text" id="sub">
                       Low-Sugar and Guilt-free Protein Pudding
                     </p>
-                    <p class="card-text">
-                      5 minutes | Calories: 143.3
-                    </p>
+                    <p class="card-text">5 minutes | Calories: 143.3</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -1146,9 +539,7 @@
                     <p class="card-text" id="sub">
                       Fresh berries, kiwis and peaches with cream cheese
                     </p>
-                    <p class="card-text">
-                      6 minutes | Calories: 110.2
-                    </p>
+                    <p class="card-text">6 minutes | Calories: 110.2</p>
                     <button type="btn" id="card-btn">Order Now</button>
                   </div>
                 </div>
@@ -1230,6 +621,89 @@
 
       <!-- end footer -->
     </footer>
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-light" id="staticBackdropLabel">
+              HelloCooking
+            </h1>
+            <button
+              type="button"
+              class="btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <img src="assets/imgs/icon/forKnife-red.png" alt="" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 class="mb-2">Login</h5>
+            <form class="needs-validation" novalidate>
+              <div class="mb-3 form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Email or Username"
+                  required
+                />
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email or Username</label
+                >
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+                <div class="invalid-feedback">
+                  Please input Username or Email.
+                </div>
+              </div>
+              <div class="mb-3 form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                  required
+                />
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <div class="invalid-feedback">Please input password.</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Remember Me</label
+                  >
+                </div>
+                <a href="#">Forgot Password</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 mb-3">
+                Submit
+              </button>
+            </form>
+            <div class="text-center">
+              Don't have an account yet? <a href="signup.html">Sign in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- ========= BOOTSTRAP JS ========== -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>

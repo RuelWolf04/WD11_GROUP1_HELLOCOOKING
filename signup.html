@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ========= Title ========== -->
+    <title>HelloCooking</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ========= BOOTSTRAP ========== -->
+    <link rel="stylesheet" href="assets/css/styles/bootstrap.min.css" />
+
+    <!-- ========= FONTAWESOME ========== -->
+    <link rel="stylesheet" href="assets/css/styles/font-awesome.css" />
+
+    <link rel="stylesheet" href="assets/css/styles/root.css" />
+    <link rel="stylesheet" href="assets/css/styles/base/nav.css" />
+    <link rel="stylesheet" href="assets/css/styles/signup.css" />
+  </head>
+  <body>
+    <section>
+      <div class="signup-box">
+        <div class="row">
+          <div class="col-lg-6"></div>
+          <div class="col-lg-6">
+            <div class="signup-box-right">
+              <h4>Sign Up</h4>
+              <form action="" class="needs-validation" novalidate>
+                <div class="input-container mt-3">
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          placeholder="Firstname"
+                          name="firstname"
+                          id="firstname"
+                          class="form-control"
+                          required
+                        />
+                        <label for="firstname">Firstname</label>
+                        <div class="invalid-feedback">
+                          Please enter your firstname.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          placeholder="Lastname"
+                          name="lastname"
+                          id="lastname"
+                          class="form-control"
+                          required
+                        />
+                        <label for="lastname">Lastname</label>
+                        <div class="invalid-feedback">
+                          Please enter your lastname.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-container mt-3">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="Email"
+                      required
+                    />
+                    <label for="email">Email</label>
+                    <div class="invalid-feedback">Please enter an email.</div>
+                  </div>
+                </div>
+
+                <div class="input-container mt-3">
+                  <div class="form-floating">
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      class="form-control"
+                      placeholder="Password"
+                      required
+                    />
+                    <label for="password">Password</label>
+                    <div class="invalid-feedback">
+                      Please enter a strong password.
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3 w-100">
+                  Register
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="bg-container">
+          <img src="assets/imgs/backgrounds/2.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========= BOOTSTRAP JS ========== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========= JS ========== -->
+    <script src="assets/js/index.js"></script>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var forms = document.querySelectorAll(".needs-validation");
+
+        Array.prototype.slice.call(forms).forEach(function (form) {
+          form.addEventListener(
+            "submit",
+            function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

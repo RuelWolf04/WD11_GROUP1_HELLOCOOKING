@@ -53,32 +53,31 @@ carouselBtns.forEach(cBtn => {
 
 
 
-// ----------------faqs
 
-const faq = document.querySelectorAll('.faq')
 
-faq.forEach((item, index) => {
-  let header = item.querySelector("header")
-  header.addEventListener("click", () => {
-    item.classList.toggle("open")
 
-    let faqAnswer = item.querySelector(".answer");
-    if(item.classList.contains("open")){
-      faqAnswer.style.height = `${faqAnswer.scrollHeight}px`
-    } else {
-    faqAnswer.style.height = '0px'
-    }
-    closeFaq(index)
-  })
-})
+// VALIDATION 
 
-function closeFaq(index){
-  faq.forEach((otherItem, otherIndex) => {
-    if(otherIndex != index){
-      otherItem.classList.remove('open')
-      let otherAnswer = otherItem.querySelector(".answer")
-      otherAnswer.style.height = '0px';
-    }
-  
-})
-};
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+          "use strict";
+
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.querySelectorAll(".needs-validation");
+
+          // Loop over them and prevent submission
+          Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener(
+              "submit",
+              function (event) {
+                if (!form.checkValidity()) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+
+                form.classList.add("was-validated");
+              },
+              false
+            );
+          });
+        })();
