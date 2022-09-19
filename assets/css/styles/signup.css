@@ -1,0 +1,36 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--green);
+
+  display: grid;
+  place-content: center;
+}
+
+.signup-box {
+  width: min(100vw, 60rem);
+  height: 30rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.signup-box-right {
+  background-color: var(--gray-100);
+  padding: 1rem;
+}
+
+.bg-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-container > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+  /* z-index: -1; */
+}
+

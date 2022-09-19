@@ -15,6 +15,7 @@ main {
   padding: 5px;
   background-color: var(--green-1);
   border-radius: 5px;
+  display: flex;
 }
 
 .img-container {
@@ -79,6 +80,7 @@ main {
 
 }
 
+
 .why-buy-container {
   font-size: 14px;
 }
@@ -125,4 +127,45 @@ main {
   color: steelblue;
   padding-inline: 5px;
   width: max-content;
+}
+
+.cil-line3.bottom-part{
+  display: none;
+}
+
+
+@media screen and (max-width: 768px){
+  .cil-line3{
+    display: none;
+  }
+
+  .cil-line3.bottom-part{
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .cil-line3-title {
+    top: -20px;
+    font-size: var(--fs-20);
+  }
+
+  
+.payment-online-type-container {
+  width: 300px;
+  height: 80px;
+  margin-bottom: 5rem;
+}
+}
+
+@media screen and (max-width: 450px){
+  .step-food-card {
+    display: grid;
+  }
+
+  .img-container {
+    width: 70%;
+    margin: auto;
+  }
 }

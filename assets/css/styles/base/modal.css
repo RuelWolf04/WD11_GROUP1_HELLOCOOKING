@@ -1,0 +1,31 @@
+
+/* -------------- login modal ------------------ */
+
+.modal-header {
+  background-color: #5fc44b;
+}
+
+.modal-header h1 {
+  color: #fefefe;
+  letter-spacing: 1px;
+  font-size: var(--fs-26);
+}
+
+.modal-header button {
+  width: 50px;
+}
+
+.modal-header button:hover {
+  border: none;
+  outline: none;
+}
+
+.modal-header button img {
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.modal-body h5 {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
