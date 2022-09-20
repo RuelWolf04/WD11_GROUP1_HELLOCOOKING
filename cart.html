@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HelloCooking-About</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ========= BOOTSTRAP ========== -->
+    <link rel="stylesheet" href="assets/css/styles/bootstrap.min.css" />
+
+    <!-- ========= FONTAWESOME ========== -->
+    <link rel="stylesheet" href="assets/css/styles/font-awesome.css" />
+
+    <!-- ========= STYLES ========== -->
+
+    <link rel="stylesheet" href="assets/css/styles/base/nav.css" />
+    <link rel="stylesheet" href="assets/css/styles/root.css" />
+    <link rel="stylesheet" href="assets/css/styles/about.css" />
+    <link rel="stylesheet" href="assets/css/styles/cart.css">
+    <link rel="stylesheet" href="assets/css/styles/base/footer.css" />
+    <link rel="stylesheet" href="assets/css/styles/base/modal.css" />
+
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- 
+  
+          HEADER - NAVBAR
+  
+          -->
+      <section class="header-sub-section">
+        <div class="container">
+          <nav class="">
+            <div class="nav__logo-container" aria-label="logo / go-to-hompage">
+              <a href="index.html" tabindex="0">
+                <img
+                  class="nav__logo-img js-nav-logo"
+                  src="assets/imgs/logo/hc-logo.png"
+                  alt="Hello Cooking Logo"
+              /></a>
+            </div>
+
+            <div class="nav__center">
+              <button
+                class="nav__menu-btn open-menu-btn js-nav-menu-open"
+                aria-label="open-menu-button"
+                aria-expanded="false"
+                aria-controls="menu"
+              >
+                <svg
+                  class="ham hamRotate ham1"
+                  viewBox="0 0 100 100"
+                  onclick="this.classList.toggle('active')"
+                >
+                  <path
+                    class="line top"
+                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+                  />
+                  <path class="line middle" d="m 30,50 h 40" />
+                  <path
+                    class="line bottom"
+                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+                  />
+                </svg>
+              </button>
+
+              <div class="nav__menu-container js-nav-menu" id="menu">
+                <ul role="menubar" class="nav__menu">
+                  <li class="nav__menu-item">
+                    <a href="index.html" role="menuitem">Home</a>
+                  </li>
+                  <li class="nav__menu-item">
+                    <a href="order.html" role="menuitem">Order Now</a>
+                  </li>
+                  <li class="nav__menu-item">
+                    <a href="products.html" role="menuitem">Recipes</a>
+                  </li>
+                  <li class="nav__menu-item active">
+                    <a href="#" role="menuitem">About</a>
+                  </li>
+                  <li class="nav__menu-item">
+                    <a href="contact.html" role="menuitem">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="nav__right">
+              <button><i class="fa-solid fa-cart-shopping"></i></button>
+
+              <a href="login.html"><i class="fa-solid fa-user"></i> Login</a>
+
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <!-- end header -->
+    </header>
+<section>
+    <div class="cart">
+        <h1>Shopping Cart</h1>
+        <div class="project">
+            <div class="shop">
+                <div class="box">
+                    <img src="assets/imgs/recipes/main-dish/adobo.png" alt="">
+                    <div class="content">
+                        <h3>Lite Adobo</h3>
+                        <h4>Price:</h4>
+                        <p class="unit">Serving Size: <input value="4"></p>
+                        <p class="btn-area">
+                            <i class="fa-solid fa-trash"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/imgs/productImgs/afritada 1.jpg" alt="">
+                    <div class="content">
+                        <h3>Chicken Afritada</h3>
+                        <h4>Price:</h4>
+                        <p class="unit">Serving Size: <input value="4"></p>
+                        <p class="btn-area">
+                            <i class="fa-solid fa-trash"></i>
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assets/imgs/productImgs/Bananas-Foster-Cheesecake 1.jpg" alt="">
+                    <div class="content">
+                        <h3>Banana Faux</h3>
+                        <h4>Price:</h4>
+                        <p class="unit">Serving Size: <input value="4"></p>
+                        <p class="btn-area">
+                            <i class="fa-solid fa-trash"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-bar">
+                <p><span>Subtotal</span> <span>$$$</span></p>
+                <hr>
+                <p><span>Delivery Fee</span> <span>$$$</span></p>
+                <hr>
+                <p><span>Promo Code</span> <span><input value="FIRDEL"></span></p>
+                <hr>
+                <p><span>Total Amount</span> <span>$$$</span></p>
+
+                <a href=""><i class="fa-solid fa-cart-shopping">Checkout</i></a>
+            </div>
+        </div>
+    </div>
+
+</section>
+    <footer>
+      <!-- start footer -->
+      <div class="container">
+        <div class="row footer-top">
+          <div class="col-lg-6 col-md-12 footer-right">
+            <div class="footer-right__container">
+              <div class="footer-right__img-container">
+                <img src="assets/imgs/logo/hc-logo.png" alt="" />
+              </div>
+              <p class="text-center">
+                We believe that home cooking for your family should be easy and convenient. If you want to cook the way your grandparents did, without processed foods and preservatives, but don't always (or ever) have time, our service is for you!
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 footer-left">
+            <div class="row footer-left__container">
+              <div
+                class="col-lg-4 col-md-4 text-md-center col-sm-12 text-sm-center mt-sm-4 footer-left__first"
+              >
+                <h5>Site</h5>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="recipes.html">Recipes</a></li>
+                  <li><a href="order-now.html">Order Now</a></li>
+                </ul>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 text-md-center col-sm-12 text-sm-center mt-sm-4 footer-left__second"
+              >
+                <h5>Helpful</h5>
+                <ul>
+                  <li><a href="#">FAQ's</a></li>
+                  <li><a href="terms.html">Terms</a></li>
+                  <li><a href="career.html">Career</a></li>
+                </ul>
+              </div>
+              <div
+                class="col-lg-4 col-md-4 text-md-center col-sm-12 text-sm-center mt-sm-4 footer-left__third"
+              >
+                <h5>Get in touch</h5>
+                <ul>
+                  <li>
+                    <p>Address: 700 Shaw Boulevard Pasig City, Metro Manila, Philippines</p>
+                  </li>
+                  <li>
+                    <p>Phone: 6338997</p>
+                  </li>
+                  <li class="footer-social-links">
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid footer-bottom">
+        <p>Group_1 &copy; HelloCooking</p>
+      </div>
+
+      <!-- end footer -->
+    </footer>
+
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title text-light" id="staticBackdropLabel">
+              HelloCooking
+            </h1>
+            <button
+              type="button"
+              class="btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <img src="assets/imgs/icon/forKnife-red.png" alt="" />
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 class="mb-2">Login</h5>
+            <form class="needs-validation" novalidate>
+              <div class="mb-3 form-floating">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Email or Username"
+                  required
+                />
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email or Username</label
+                >
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+                <div class="invalid-feedback">
+                  Please input Username or Email.
+                </div>
+              </div>
+              <div class="mb-3 form-floating">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                  required
+                />
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <div class="invalid-feedback">Please input password.</div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >Remember Me</label
+                  >
+                </div>
+                <a href="#">Forgot Password</a>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 mb-3">
+                Submit
+              </button>
+            </form>
+            <div class="text-center">
+              Don't have an account yet? <a href="signup.html">Sign in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========= BOOTSTRAP JS ========== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ========= JS ========== -->
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
