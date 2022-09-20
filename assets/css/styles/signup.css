@@ -1,22 +1,33 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: var(--green);
-
   display: grid;
   place-content: center;
-}
-
-.signup-box {
-  width: min(100vw, 60rem);
-  height: 30rem;
-  padding: 2rem;
   position: relative;
 }
 
+.signup-box {
+  width: min(100vw, 30rem);
+  height: 30rem;
+  padding: 2rem;
+}
+
 .signup-box-right {
-  background-color: var(--gray-100);
+  background-color: var(--gray-100-l6);
   padding: 1rem;
+  border-radius: 10px;
+}
+
+.signup-box-right .logo-container {
+  width: 40%;
+  margin-inline: auto;
+  margin-bottom: 10px;
+}
+
+.signup-box h5 {
+  /* color: var(--green); */
+  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .bg-container {

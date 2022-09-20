@@ -15,9 +15,11 @@
     <!-- ========= STYLES ========== -->
     <link rel="stylesheet" href="assets/css/styles/base/nav.css" />
     <link rel="stylesheet" href="assets/css/styles/root.css" />
-    <link rel="stylesheet" href="assets/css/styles/products.css" />
     <link rel="stylesheet" href="assets/css/styles/specificprod.css" />
     <link rel="stylesheet" href="assets/css/styles/base/footer.css" />
+
+
+
   </head>
 
   <body>
@@ -27,145 +29,315 @@
           HEADER - NAVBAR
   
           -->
-      <section class="header-sub-section">
-        <div class="container">
-          <nav class="">
-            <div class="nav__logo-container" aria-label="logo / go-to-hompage">
-              <a href="index.html" tabindex="0">
-                <img
-                  class="nav__logo-img js-nav-logo"
-                  src="assets/imgs/logo/hc-logo.png"
-                  alt="Hello Cooking Logo"
-              /></a>
+          <section class="header-sub-section">
+            <div class="container">
+              <nav class="">
+                <div class="nav__logo-container" aria-label="logo / go-to-hompage">
+                  <a href="#" tabindex="0">
+                    <img
+                      class="nav__logo-img js-nav-logo"
+                      src="assets/imgs/logo/hc-logo.png"
+                      alt="Hello Cooking Logo"
+                  /></a>
+                </div>
+    
+                <div class="nav__center">
+                  <button
+                    class="nav__menu-btn open-menu-btn js-nav-menu-open"
+                    aria-label="open-menu-button"
+                    aria-expanded="false"
+                    aria-controls="menu"
+                  >
+                    <svg
+                      class="ham hamRotate ham1"
+                      viewBox="0 0 100 100"
+                      onclick="this.classList.toggle('active')"
+                    >
+                      <path
+                        class="line top"
+                        d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+                      />
+                      <path class="line middle" d="m 30,50 h 40" />
+                      <path
+                        class="line bottom"
+                        d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+                      />
+                    </svg>
+                  </button>
+    
+                  <div class="nav__menu-container js-nav-menu" id="menu">
+                    <ul role="menubar" class="nav__menu">
+                      <li class="nav__menu-item active">
+                        <a href="#" role="menuitem">Home</a>
+                      </li>
+                      <li class="nav__menu-item">
+                        <a href="order.html" role="menuitem">Order Now</a>
+                      </li>
+                      <li class="nav__menu-item">
+                        <a href="products.html" role="menuitem">Recipes</a>
+                      </li>
+                      <li class="nav__menu-item">
+                        <a href="about.html" role="menuitem">About</a>
+                      </li>
+                      <li class="nav__menu-item">
+                        <a href="contact.html" role="menuitem">Contact</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+    
+                <div class="nav__right">
+                  <button><i class="fa-solid fa-cart-shopping"></i></button>
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                    ><i class="fa-solid fa-user"></i> Login</a
+                  >
+                </div>
+              </nav>
             </div>
-
-            <div class="nav__center">
-              <button
-                class="nav__menu-btn open-menu-btn js-nav-menu-open"
-                aria-label="open-menu-button"
-                aria-expanded="false"
-                aria-controls="menu"
-              >
-                <svg
-                  class="ham hamRotate ham1"
-                  viewBox="0 0 100 100"
-                  width="80"
-                  onclick="this.classList.toggle('active')"
-                >
-                  <path
-                    class="line top"
-                    d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
-                  />
-                  <path class="line middle" d="m 30,50 h 40" />
-                  <path
-                    class="line bottom"
-                    d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
-                  />
-                </svg>
-              </button>
-
-              <div class="nav__menu-container js-nav-menu" id="menu">
-                <ul role="menubar" class="nav__menu">
-                  <li class="nav__menu-item">
-                    <a href="index.html" role="menuitem">Home</a>
-                  </li>
-                  <li class="nav__menu-item">
-                    <a href="order.html" role="menuitem">Order Now</a>
-                  </li>
-                  <li class="nav__menu-item">
-                    <a href="#" role="menuitem">Recipes</a>
-                  </li>
-                  <li class="nav__menu-item">
-                    <a href="about.html" role="menuitem">About</a>
-                  </li>
-                  <li class="nav__menu-item">
-                    <a href="contact.html" role="menuitem">Contact</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="nav__right">
-              <span><i class="fa-solid fa-magnifying-glass"></i></span>
-              <span><i class="fa-solid fa-cart-shopping"></i></span>
-              <a href="#">Sign In</a>
-            </div>
-          </nav>
-        </div>
-      </section>
+          </section>
 
       <!-- end header -->
     </header>
+    <main>
+    <section id="recipe" class="mb-3">
+      <div class="container-md">
+        <h1 class="mb-4">Traditional Chicken Afritada</h1>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <img src="assets/imgs/productImgs/afritada 1.jpg" alt="">
-        </div>
-        <div class="col-md-4" id="description">
-            <h4>Cooking Time</h4>
-            <li>Minutes to Prepare: 5</li>
-            <li>Minutes to Cook: 15</li>
-            <li>Number of Servings: 2</li>
-            <br>
-            <h4>Nutritional Info</h4>
-            <li>Servings Per Recipe: 2</li>
-            <li>Amount Per Serving</li>
-            <li>Calories: 504.7</li>
-            <li>Total Fat: 20.4 g</li>
-            <li>Cholesterol: 124.5 mg</li>
-            <li>Sodium: 1,521.2 mg</li>
-            <li>Total Carbs: 45.0 g</li>
-            <li>Dietary Fiber: 6.8 g</li>
-            <li>Protein: 36.2 g</li> 
+        <div class="row">
+          <div class="col-lg-8 mb-5">
+            <div class="food-img-container">
+              <img src="assets/imgs/productImgs/afritada 1.jpg" alt="" />
+            </div>
+            <div class="food-img-description">
+              <h5 class="sub-title">Overview</h5>
+              Chicken Afritada is a classic Filipino stew made of beef, pork,
+              chicken, or fish simmered until perfectly tender in a fresh
+              tomato-based sauce with potatoes, carrots, and bell peppers. This
+              classic Filipino stew is easy to make and budget-friendly yet
+              hearty and flavorful. Perfect for family dinners and special
+              occasions!
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="order-button-container">
+              <button>Order Now</button>
+            </div>
+            <div class="brief-description">
+              <p><span class="label">Category : </span> Main Dish, Chicken</p>
+              <p><span class="label">Preparation Time : </span> 10min</p>
+              <p><span class="label">Cooking Time : </span> 15min</p>
+
+              <div class="brief-description-nutrifacts">
+                <p class="nutrifact-title">Nutrition Value</p>
+                <ul>
+                  <li>Calories: <span>504.7</span></li>
+                  <li>Total Fat: <span>20.4 g</span></li>
+                  <li>Cholesterol: <span>124.5 mg</span></li>
+                  <li>Sodium: <span>1,521.2 mg</span></li>
+                  <li>Total Carbs: <span>45.0 g</span></li>
+                  <span>
+                    <li>Dietary Fiber: <span>6.8 g</span></li>
+                  </span>
+                  <li>Protein: <span>36.2 g</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <br>
-    <div class="container">
+    </section>
+    <section id="ingridients-procedure-section" class="mb-5">
+    <div class="container-md">
       <div class="row">
-        <div class="col-md-12">
-          <h1>Traditional Chicken Afritada</h1>
+        <div class="col-lg-5 mb-3">
+          <div id="ingredients">
+            <div class="num-of-persons-btns d-flex">
+              <div class="input-group d-flex align-items-center">
+                <p class="me-2">Serving amount: </p>
+                <input type="radio" name="persons" id="two" checked>
+                <label for="two">2</label>
+                <input type="radio" name="persons" id="four">
+                <label for="four">4</label>
+            </div>
+            </div>
+            <h5 class="sub-title">Ingredients</h5>
+            <ul>
+              <li><span>Canola oil</span> <span>3 tbsp</span></li>
+              <li><span>Clove Garlic, minced</span><span>1</span></li>
+              <li><span>medium onion, finely chopped</span><span>1</span></li>
+              <li><span>red ripe tomatoes, chopped or sliced</span>1</span></li>
+              <li><span>chicken thigh cut into medium pieces</span><span>3</span></li>
+              <li><span>chicken thigh cut into medium pieces</span><span>300g</span></li>
+              <li><span>medium carrot, chopped</span><span>1</span></li>
+              <li><span>medium potato, quartered</span><span>1</span></li>
+              <li><span>green peppers (bell peppers), chopped</span><span>1</span></li>
+              <li><span>water</span><span>0.50 cup</span></li>
+              <li><span>ground sage, ground</span><span>0.50 tsp</span></li>
+              <li><span>leaves, basil, finely chopped</span><span>3</span></li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </div>
-    <br>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4" id="ingredients">
-          <h4>Ingredients</h4>
-          <ul>
-            <li>3 tbsp canola oil</li>
-            <li>1 clove garlic, minced</li>
-            <li>1 medium onion, finely chopped</li>
-            <li>1 red ripe tomatoes, chopped or sliced</li>
-            <li>3 tbsp soy sauce</li>
-            <li>300g chicken thigh cut into medium pieces</li>
-            <li>1 medium carrot, chopped</li>
-            <li>1 medium potato, quartered</li>
-            <li>1 green peppers (bell peppers), chopped</li>
-            <li>0.50 cup (8 fl oz) water</li>
-            <li>0.50 tsp, ground sage, ground</li>
-            <li>3 leaves, basil, finely chopped</li>
-          </ul>
-        </div>
-        <div class="col-md-8" id="directions">
-          <h4>Directions</h4>
-          <li>1.) Sauté garlic and onions; add tomatoes, and soy sauce and reduce to a thick sauce.</li>
-          <li>2.) In a separate pan, sear the chicken until the skin has some nice brown color. Add the chicken to the tomato sauce and simmer for 2 minutes in low heat.</li>
-          <li>3.) Add water, carrots, potatoes, and bell pepper. Cover and cooked for 5 minutes or until the stock is reduced to a thick sauce.</li>
-          <li>4.) Add spices and serve.</li>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="container d-flex flex-row">
-      <button type="btn" id="btn">ORDER READY-TO EAT</button>
-      <button type="btn" id="btn">ORDER READY-TO COOK</button>
-</div>
-    <br>
+        <div class="col-lg-7 mb-3" id="directions">
+          <div>
+          <h5 class="sub-title">Directions</h5>
+          <ol id="directions-list">
+            <li>
+              Sauté garlic and onions; add tomatoes, and soy sauce and reduce
+            to a thick sauce.
+            </li>
+            <li>
+              In a separate pan, sear the chicken until the skin has some nice
+            brown color. Add the chicken to the tomato sauce and simmer for 2
+            minutes in low heat.
+            </li>
+            <li>
+              Add water, carrots, potatoes, and bell pepper. Cover and cooked
+              for 5 minutes or until the stock is reduced to a thick sauce.
+            </li>
+          <li>Add spices and serve.</li>
 
+          </ol>
+        </div>
+        <div>
+          <h5 class="sub-title">Utensils</h5>
+          <ol id="utensils-list">
+            <li>
+              Chopping Board
+            </li>
+            <li>Measuring Cups</li>
+            <li>Measuring Spoon</li>
+            <li>Spatula</li>
+          </ol>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="you-might-like" class="mb-3">
+    <div class="container-md">
+      <h4 class="sub-title">You might also like...</h4>
+      <div class="cards-container">
+        <div class="card-container">
+        <div class="card-">
+          <div class="left-card-img-container">
+            <img
+              src="assets/imgs/productImgs/Vegan-Sisig_0953-768x1024 1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="description">
+            <div class="line line1">
+              <h5>Vegan Sisig</h5>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, facere!</p>
+            </div>
+            <div class="line line2">
+              <div class="line2-left">
+                <p>20min</p>
+                <p>Vegetables</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-overlay">
+            <div class="card-buttons">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card-">
+          <div class="left-card-img-container">
+            <img
+              src="assets/imgs/productImgs/Vegan-Sisig_0953-768x1024 1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="description">
+            <div class="line line1">
+              <h5>Vegan Sisig</h5>
+
+            </div>
+            <div class="line line2">
+              <div class="line2-left">
+                <p>20min</p>
+                <p>Vegetables</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-overlay">
+            <div class="card-buttons">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card-">
+          <div class="left-card-img-container">
+            <img
+              src="assets/imgs/productImgs/Vegan-Sisig_0953-768x1024 1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="description">
+            <div class="line line1">
+              <h5>Vegan Sisig</h5>
+
+            </div>
+            <div class="line line2">
+              <div class="line2-left">
+                <p>20min</p>
+                <p>Vegetables</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-overlay">
+            <div class="card-buttons">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card-">
+          <div class="left-card-img-container">
+            <img
+              src="assets/imgs/productImgs/Vegan-Sisig_0953-768x1024 1.jpg"
+              alt=""
+            />
+          </div>
+          <div class="description">
+            <div class="line line1">
+              <h5>Vegan Sisig</h5>
+
+            </div>
+            <div class="line line2">
+              <div class="line2-left">
+                <p>20min</p>
+                <p>Vegetables</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="card-overlay">
+            <div class="card-buttons">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button><i class="fa-solid fa-bag-shopping"></i></button>
+          </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  </main>
     <footer>
       <!-- start footer -->
       <div class="container">
@@ -176,7 +348,10 @@
                 <img src="assets/imgs/logo/hc-logo.png" alt="" />
               </div>
               <p class="text-center">
-                We believe that home cooking for your family should be easy and convenient. If you want to cook the way your grandparents did, without processed foods and preservatives, but don't always (or ever) have time, our service is for you!
+                We believe that home cooking for your family should be easy and
+                convenient. If you want to cook the way your grandparents did,
+                without processed foods and preservatives, but don't always (or
+                ever) have time, our service is for you!
               </p>
             </div>
           </div>
@@ -210,7 +385,10 @@
                 <h5>Get in touch</h5>
                 <ul>
                   <li>
-                    <p>Address: 700 Shaw Boulevard Pasig City, Metro Manila, Philippines</p>
+                    <p>
+                      Address: 700 Shaw Boulevard Pasig City, Metro Manila,
+                      Philippines
+                    </p>
                   </li>
                   <li>
                     <p>Phone: 6338997</p>
@@ -238,5 +416,6 @@
 
     <!-- ========= JS ========== -->
     <script src="assets/js/index.js"></script>
+
   </body>
 </html>
