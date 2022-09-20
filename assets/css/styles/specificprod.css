@@ -293,12 +293,12 @@ font-size: var(--fs-18);
 
 .card- .card-overlay .card-buttons button:first-child {
     transform: translateX(-20px);
-    transition: .3s ease-in;
+    transition: .15s ease-in;
 }
 
 .card- .card-overlay .card-buttons button:last-child {
     transform: translateX(20px);
-    transition: .3s ease-in;
+    transition: .15s ease-in;
 }
 
 
@@ -313,6 +313,11 @@ font-size: var(--fs-18);
 
 .card-container .card-:hover .card-overlay button {
     transform: translateX(0);
+}
+
+.card-overlay button:hover {
+    background-color: var(--green);
+    color: var(--gray-100);
 }
 
 

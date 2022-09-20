@@ -14,9 +14,12 @@ main {
   padding-bottom: 2rem;
 }
 
+.card-body {
+  padding: 10px;
+}
+
 #sub {
   white-space: nowrap; 
-  width: 160px; 
   overflow: hidden;
   text-overflow: ellipsis; 
 }
@@ -26,7 +29,7 @@ main {
 
 .card .card-image-container {
   width: 100%;
-  height: 8rem;
+  height: 10rem;
 }
 
 .card-image-container > img {
@@ -73,18 +76,68 @@ main {
   color: var(--green);
 }
 
-.card-body #card-btn {
-  background-color: #5fc44b;
-  color: var(--gray-100);
-  width: 90%;
-  padding-block: .325rem;
-  border-radius: 100vmax;
+
+.card-body .card-title {
+  font-family: var(--ff-lato);
+  font-size: var(--fs-18);
+  font-weight: 500;
+}
+
+.card-body .card-text:last-child{
 
   position: absolute;
-  left: 50%;
+  left: 10px;
   bottom: 10px;
-  transform: translateX(-50%);
 }
+
+
+
+.card .card-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.628);
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  transition: .3s ease-out;
+}
+
+.card .card-overlay .card-buttons button {
+  margin: 10px;
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 100vmax;
+}
+
+.card .card-overlay .card-buttons button:first-child {
+  transform: translateX(-20px);
+  transition: .15s ease-in;
+}
+
+.card .card-overlay .card-buttons button:last-child {
+  transform: translateX(20px);
+  transition: .15s ease-in;
+}
+
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.358);
+
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card:hover .card-overlay .card-buttons button {
+  transform: translateX(0);
+}
+
+.card-overlay .card-buttons button:hover {
+  background-color: var(--green);
+  color: var(--gray-100);
+}
+
 
 
 
