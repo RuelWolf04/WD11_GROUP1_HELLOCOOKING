@@ -110,11 +110,56 @@
               <span class="btn-name">Search</span>
             </button>
           </div>
-          <button class="btn" id="product-filter-btn" type="button">
-            <i class="fa-solid fa-filter"></i>
-            <span class="btn-name">Filter</span>
-          </button>
-          <button class="btn" id="product-cart-btn" type="button">
+          <div class="filter-drowpdown-container">
+            <button class="btn" id="product-filter-btn" type="button">
+              <i class="fa-solid fa-filter"></i>
+              <span class="btn-name">Filter</span>
+            </button>
+            <div class="filter-dropdown">
+              <div class="filter-dropdown-main-ingredient">
+                <div class="">
+                  <label for="fish">Fish</label>
+                  <input type="radio" name="main-ingredient" id="fish" />
+                </div>
+                <div class="">
+                  <label for="chicken">Chicken</label>
+                  <input type="radio" name="main-ingredient" id="chicken" />
+                </div>
+                <div class="">
+                  <label for="pork">Pork</label>
+                  <input type="radio" name="main-ingredient" id="pork" />
+                </div>
+                <div class="">
+                  <label for="shrimp">Shrimp</label>
+                  <input type="radio" name="main-ingredient" id="shrimp" />
+                </div>
+              </div>
+              <div class="filter-dropdown-vegetable-ingredient">
+                <div class="">
+                  <label for="sitaw">Sitaw</label>
+                  <input type="checkbox" name="main-ingredient" id="sitaw" />
+                </div>
+                <div class="">
+                  <label for="kalabasa">Kalabasa</label>
+                  <input type="checkbox" name="main-ingredient" id="kalabasa" />
+                </div>
+                <div class="">
+                  <label for="repolyo">Repolyo</label>
+                  <input type="checkbox" name="main-ingredient" id="repolyo" />
+                </div>
+                <div class="">
+                  <label for="talong">Talong</label>
+                  <input type="checkbox" name="main-ingredient" id="talong" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="btn"
+            id="product-cart-btn"
+            type="button"
+            onclick="window.location.href = 'cart.html'"
+          >
             <i class="fa-solid fa-cart-shopping"></i>
             <span class="btn-name">Cart</span>
           </button>
@@ -126,8 +171,9 @@
             <h4 class="mb-3" id="product-section-subheading">Dish</h4>
             <div
               class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-3 g-2"
+              id="dish-cards"
             >
-              <div class="col">
+              <!-- <div class="col">
                 <div class="card h-100">
                   <div class="card-image-container">
                     <img
@@ -357,7 +403,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 

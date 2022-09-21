@@ -56,7 +56,7 @@ main {
 #product-filter-btn,
 #product-cart-btn,
 #product-search-btn {
-  padding: 0px 1rem !important;
+  padding: 10px 1rem !important;
   background-color: #5fc44b;
   border: none;
   display: flex;
@@ -71,6 +71,56 @@ main {
 #product-search-btn i {
   font-size: .775rem;
 }
+
+#product-filter-btn:focus ~ .filter-dropdown {
+  pointer-events: auto;
+opacity: 1;
+}
+
+.filter-drowpdown-container {
+  position: relative;
+}
+
+.filter-drowpdown-container .filter-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background-color: antiquewhite;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.filter-drowpdown-container .filter-dropdown input {
+  display: none;
+}
+
+.filter-dropdown label {
+  padding: 10px;
+  width: 8rem;
+  transition: .2s ease-out;
+}
+
+.filter-dropdown label:hover {
+  background-color: var(--green);
+  color: var(--gray-100);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #product-section-subheading {
   color: var(--green);
