@@ -74,7 +74,7 @@
                         <a href="order.html" role="menuitem">Order Now</a>
                       </li>
                       <li class="nav__menu-item active">
-                        <a href="#" role="menuitem">Recipes</a>
+                        <a href="products.html" role="menuitem">Recipes</a>
                       </li>
                       <li class="nav__menu-item">
                         <a href="about.html" role="menuitem">About</a>
@@ -104,21 +104,16 @@
     <main>
     <section id="recipe" class="mb-3">
       <div class="container-md">
-        <h1 class="mb-4">Traditional Chicken Afritada</h1>
+        <h1 class="mb-4" id="js-recipe-name"></h1>
 
         <div class="row">
           <div class="col-lg-8 mb-5">
-            <div class="food-img-container">
-              <img src="assets/imgs/productImgs/afritada 1.jpg" alt="" />
+            <div class="food-img-container" id='js-food-img-container'>
             </div>
             <div class="food-img-description">
               <h5 class="sub-title">Overview</h5>
-              Chicken Afritada is a classic Filipino stew made of beef, pork,
-              chicken, or fish simmered until perfectly tender in a fresh
-              tomato-based sauce with potatoes, carrots, and bell peppers. This
-              classic Filipino stew is easy to make and budget-friendly yet
-              hearty and flavorful. Perfect for family dinners and special
-              occasions!
+              <div class="js-food-overview-content">
+              </div>
             </div>
           </div>
 
@@ -127,22 +122,22 @@
               <button>Order Now</button>
             </div>
             <div class="brief-description">
-              <p><span class="label">Category : </span> Main Dish, Chicken</p>
-              <p><span class="label">Preparation Time : </span> 10min</p>
-              <p><span class="label">Cooking Time : </span> 15min</p>
+              <p><span class="label me-1">Category : </span> <span id="js-recipe-category"></span></p>
+              <p><span class="label me-1">Preparation Time : </span> <span id="js-recipe-prep-time"></span>
+              <p><span class="label me-1">Cooking Time : </span> <span id="js-recipe-cooking-time"></span>
 
               <div class="brief-description-nutrifacts">
                 <p class="nutrifact-title">Nutrition Value</p>
-                <ul>
-                  <li>Calories: <span>504.7</span></li>
-                  <li>Total Fat: <span>20.4 g</span></li>
-                  <li>Cholesterol: <span>124.5 mg</span></li>
-                  <li>Sodium: <span>1,521.2 mg</span></li>
-                  <li>Total Carbs: <span>45.0 g</span></li>
+                <ul class="nutrifacs-list">
+                  <li>Calories: <span id="js-calorie">504.7</span></li>
+                  <li>Total Fat: <span id="js-fat">20.4 g</span></li>
+                  <li>Cholesterol: <span id="js-cholesterol">124.5 mg</span></li>
+                  <li>Sodium: <span id="js-sodium">1,521.2 mg</span></li>
+                  <li>Total Carbs: <span id="js-carbs">45.0 g</span></li>
                   <span>
-                    <li>Dietary Fiber: <span>6.8 g</span></li>
+                    <li>Dietary Fiber: <span id="js-dietary-fiber">6.8 g</span></li>
                   </span>
-                  <li>Protein: <span>36.2 g</span></li>
+                  <li>Protein: <span id="js-protein">36.2 g</span></li>
                 </ul>
               </div>
             </div>
@@ -418,6 +413,7 @@
 
     <!-- ========= JS ========== -->
     <script src="assets/js/index.js"></script>
+    <script type="module" src="assets/js/product-page.js"></script>
 
   </body>
 </html>

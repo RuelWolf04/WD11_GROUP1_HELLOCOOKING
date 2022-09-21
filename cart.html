@@ -17,10 +17,9 @@
     <link rel="stylesheet" href="assets/css/styles/base/nav.css" />
     <link rel="stylesheet" href="assets/css/styles/root.css" />
     <link rel="stylesheet" href="assets/css/styles/about.css" />
-    <link rel="stylesheet" href="assets/css/styles/cart.css">
+    <link rel="stylesheet" href="assets/css/styles/cart.css" />
     <link rel="stylesheet" href="assets/css/styles/base/footer.css" />
     <link rel="stylesheet" href="assets/css/styles/base/modal.css" />
-
   </head>
 
   <body>
@@ -74,11 +73,11 @@
                   <li class="nav__menu-item">
                     <a href="order.html" role="menuitem">Order Now</a>
                   </li>
-                  <li class="nav__menu-item">
-                    <a href="products.html" role="menuitem">Recipes</a>
-                  </li>
                   <li class="nav__menu-item active">
-                    <a href="#" role="menuitem">About</a>
+                    <a href="products.html " role="menuitem">Recipes</a>
+                  </li>
+                  <li class="nav__menu-item">
+                    <a href="about.html" role="menuitem">About</a>
                   </li>
                   <li class="nav__menu-item">
                     <a href="contact.html" role="menuitem">Contact</a>
@@ -91,7 +90,6 @@
               <button><i class="fa-solid fa-cart-shopping"></i></button>
 
               <a href="login.html"><i class="fa-solid fa-user"></i> Login</a>
-
             </div>
           </nav>
         </div>
@@ -99,61 +97,77 @@
 
       <!-- end header -->
     </header>
-<section>
-    <div class="cart">
-        <h1>Shopping Cart</h1>
-        <div class="project">
-            <div class="shop">
-                <div class="box">
-                    <img src="assets/imgs/recipes/main-dish/adobo.png" alt="">
-                    <div class="content">
-                        <h3>Lite Adobo</h3>
-                        <h4>Price:</h4>
-                        <p class="unit">Serving Size: <input value="4"></p>
-                        <p class="btn-area">
-                            <i class="fa-solid fa-trash"></i>
-                        </p>
-                    </div>
+    <main>
+      <section>
+        <div class="container-md cart">
+          <h1>Shopping Cart</h1>
+          <div class="project row">
+            <div class="shop col-lg-8">
+              <div class="box">
+                <div class="box-img-container">
+                  <img src="assets/imgs/recipes/main-dish/adobo.png" alt="" />
                 </div>
-                <div class="box">
-                    <img src="assets/imgs/productImgs/afritada 1.jpg" alt="">
-                    <div class="content">
-                        <h3>Chicken Afritada</h3>
-                        <h4>Price:</h4>
-                        <p class="unit">Serving Size: <input value="4"></p>
-                        <p class="btn-area">
-                            <i class="fa-solid fa-trash"></i>
-                        </p>
+                <div class="content">
+                  <div class="d-flex">
+                    <h3>Lite Adobo</h3>
+                    <p>Price:</p>
+                    <div
+                      class="serving-size-options d-flex align-items-center gap-2"
+                    >
+                      <p>Serving Sive :</p>
+                      <div class="">
+                        <input
+                          type="radio"
+                          name="serving-size"
+                          id="serving-size-two"
+                          value="2"
+                          checked
+                        />
+                        <label for="serving-size-two">2</label>
+                      </div>
+                      <div class="">
+                        <input
+                          type="radio"
+                          name="serving-size"
+                          id="serving-size-four"
+                          value="4"
+                        />
+                        <label for="serving-size-four">4</label>
+                      </div>
                     </div>
+                  </div>
+
+                  <button class="btn-area">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
                 </div>
-                <div class="box">
-                    <img src="assets/imgs/productImgs/Bananas-Foster-Cheesecake 1.jpg" alt="">
-                    <div class="content">
-                        <h3>Banana Faux</h3>
-                        <h4>Price:</h4>
-                        <p class="unit">Serving Size: <input value="4"></p>
-                        <p class="btn-area">
-                            <i class="fa-solid fa-trash"></i>
-                        </p>
-                    </div>
-                </div>
+              </div>
             </div>
 
-            <div class="right-bar">
-                <p><span>Subtotal</span> <span>$$$</span></p>
-                <hr>
-                <p><span>Delivery Fee</span> <span>$$$</span></p>
-                <hr>
-                <p><span>Promo Code</span> <span><input value="FIRDEL"></span></p>
-                <hr>
-                <p><span>Total Amount</span> <span>$$$</span></p>
+            <div class="col-lg-4">
+              <div class="right-bar">
+                <div>
+                  <p>Subtotal :</p>
+                  <p>₱<span class="subtotal">100</span></p>
+                </div>
+                <div>
+                  <p>Delivery Fee :</p>
+                  <p>₱<span class="deliveryFee">100</span></p>
+                </div>
+                <div>
+                  <p>Total :</p>
+                  <p>₱<span class="deliveryFee">200</span></p>
+                </div>
 
-                <a href=""><i class="fa-solid fa-cart-shopping">Checkout</i></a>
+                <button class="sana-all-button">
+                  <i class="fa-solid fa-cart-shopping"></i>Checkout
+                </button>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-
-</section>
+      </section>
+    </main>
     <footer>
       <!-- start footer -->
       <div class="container">
@@ -164,7 +178,10 @@
                 <img src="assets/imgs/logo/hc-logo.png" alt="" />
               </div>
               <p class="text-center">
-                We believe that home cooking for your family should be easy and convenient. If you want to cook the way your grandparents did, without processed foods and preservatives, but don't always (or ever) have time, our service is for you!
+                We believe that home cooking for your family should be easy and
+                convenient. If you want to cook the way your grandparents did,
+                without processed foods and preservatives, but don't always (or
+                ever) have time, our service is for you!
               </p>
             </div>
           </div>
@@ -198,7 +215,10 @@
                 <h5>Get in touch</h5>
                 <ul>
                   <li>
-                    <p>Address: 700 Shaw Boulevard Pasig City, Metro Manila, Philippines</p>
+                    <p>
+                      Address: 700 Shaw Boulevard Pasig City, Metro Manila,
+                      Philippines
+                    </p>
                   </li>
                   <li>
                     <p>Phone: 6338997</p>

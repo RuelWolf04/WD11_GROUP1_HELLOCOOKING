@@ -58,14 +58,10 @@ carouselBtns.forEach(cBtn => {
 
 // VALIDATION 
 
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
           "use strict";
-
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
           var forms = document.querySelectorAll(".needs-validation");
 
-          // Loop over them and prevent submission
           Array.prototype.slice.call(forms).forEach(function (form) {
             form.addEventListener(
               "submit",
@@ -84,71 +80,17 @@ carouselBtns.forEach(cBtn => {
 
 
 
+// from recipes  to specific product 
+        function viewproduct(id) {
+          
 
-// cards
+          localStorage.setItem('id', id)
 
-const dishCards = document.getElementById('dish-cards')
-
-const dishCardItem = [{
-  id: 'Lite Adobo',
-  name: 'Lite Adobo',
-  hash: 'Tangy Chicken in Garlic Sauce',
-  img: 'assets/imgs/productImgs/Healthy-Adobo-Recipe-HN857-iStock629557450-Sized 1.jpg',
-  cookingTime: '30min',
-  calorie: "134.5",
-  prepTime: '10min',
-  fat: '3.3g',
-  cholesterol: '25.8',
-  sodium: '580.7mg',
-  carbs: '8.4g',
-  dietaryFiber: '0.8g',
-  descrip: 'loremfajoruorajfopafaofoapfaoh fo afasja'
-},
-{
-  id: 'Traditional Chicken Afritada',
-  name: 'Traditional Chicken Afritada',
-  hash: 'with Organic Tomato Sauce',
-  img: 'assets/imgs/productImgs/afritada 1.jpg',
-  cookingTime: '15m',
-  calorie: "504.7"
-}
-]
-
-const newDishCard = () => {
-  return (dishCards.innerHTML =  dishCardItem.map((a) =>  {
-    let { id, name, hash, img, cookingTime, calorie} = a
-  return `
-    <div class="col">
-                <div class="card h-100" id='product-card-${id}'>
-                  <div class="card-image-container">
-                    <img
-                      src="${img}"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">${name}</h5>
-                    <p class="card-text">${hash}</p>
-                    <p class="card-text">${cookingTime} | Calories: ${calorie}</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button onclick="viewProduct(${id})">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-    `}).join(""))
-
-}
-  
+          window.location.href = 'afritada.html'
+        }
 
 
 
-newDishCard();
 
-let viewProduct = (a) =>{ 
-  alert(a)
-}
+
+        
