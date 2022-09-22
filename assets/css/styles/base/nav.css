@@ -11,7 +11,7 @@ html {
 body {
   font-family: var(--ff-lato);
   position: relative;
-  color: var(--text);
+  color: hsl(var(--text)) /1;
   background-color: var(--bg);
 }
 
@@ -136,7 +136,6 @@ transition: .3s ease-out;
   align-items: center;
   justify-content: end;
   width: min(150px, 20vw);
-  /* max-width: 150px; */
 }
 
 .nav__right>* {

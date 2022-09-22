@@ -53,20 +53,16 @@ footer {
 }
 
 
-
-
-
-
-
 /* color scheme */
 
-.nav_menu .color-theme-container {
+#nav-button-scheme-container {
   display: none;
 }
 
 
 
 .color-theme-container {
+  /* display: none; */
   position: fixed;
   bottom: 20px;
   left: 10px;
@@ -116,6 +112,12 @@ footer {
   .color-theme-container {
   display: none;
   }
+
+  #nav-button-scheme-container {
+    display: block;
+  }
+  
+  
 
 
   .footer-left__first,

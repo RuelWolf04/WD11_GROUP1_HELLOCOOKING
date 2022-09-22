@@ -27,7 +27,7 @@
     /* height: 25rem; */
     overflow: hidden;
 
-    background-color: #5fc44b;
+    background-color: var(--green);
     padding: .3rem;
 }
 
@@ -62,10 +62,7 @@ border-radius: 5px;
 }
 
 .brief-description {
-    /* background-color: #5fc44b; */
     padding: 1rem;
-    /* box-shadow: 0 0 15px var(--gray-300); */
-    
     border: 1px solid var(--gray-300);
 }
 
@@ -100,9 +97,7 @@ font-size: var(--fs-18);
 
 
 /* ====================== section 2 =================== */
-/* #ingridients-procedure-section {
-    margin-block: 5rem;
-} */
+
 
 
 
@@ -159,8 +154,8 @@ font-size: var(--fs-18);
 
 
 #directions {
-    background-color: rgb(141, 231, 96);
-}
+    background-color: var(--green);
+}   
 
 #directions > div {
     margin-bottom: 2rem;
@@ -193,32 +188,26 @@ font-size: var(--fs-18);
 
 
 
-
-/* 
-#you-might-like .container {
-} */
-
-
-
 .cards-container {
-    /* overflow: scroll; */
     display: flex;
     flex-wrap: wrap;    
 }
 
 .card-container {
     padding: 3px;
-    background-color: antiquewhite;
 }
 
 .card-container .card- {
-    /* flex: 0 0 25%; */
     width: 17rem;
     height: 18rem;
     background-color: var(--green);
     position: relative;
     padding-bottom: 30px;
+    background-color: #fefefe;
     transition: all .3s ease-out;
+    box-shadow: 2px 3px var(--gray-300);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 
@@ -236,7 +225,7 @@ font-size: var(--fs-18);
 }
 
 .card- .description {
-
+    border-top: 5px solid var(--green);
     padding: 10px;
     height: auto;
 }
