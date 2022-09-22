@@ -30,7 +30,7 @@ footer {
 
 .footer-left__container a,
 .footer-left__container p {
-  color: var(--gray-800);
+  color: var(--text);
 }
 
 .footer-left__container a:not(i){
@@ -50,6 +50,56 @@ footer {
   text-align: center;
   padding-block: 1em;
   border-top: 1px solid var(--green);
+}
+
+
+
+
+
+/* color scheme */
+
+.color-theme-container {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+}
+
+.color-theme-container .button-theme {
+  width: calc(3vw + 1rem);
+  aspect-ratio: 1/1;
+  padding: 10px;
+  border-radius: 100vmax;
+  background-color: var(--green);
+  transform: scale(0);
+  display: none;
+  pointer-events: none;
+  transition: var(--transition-all-250-ease-out);
+  cursor: pointer;
+}
+
+.color-theme-container .button-theme img {
+  object-fit: contain;
+}
+
+.color-theme-container .button-theme.active {
+  transform: scale(1);
+  pointer-events: auto;
+  display: block;
+}
+
+
+
+
+#messenger-button {
+  width: calc(3vw + 1rem);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  aspect-ratio: 1/1;
+  background-color: var(--green);
+  border-radius: 100vmax;
+  font-size: var(--fs-26);
+
 }
 
 
