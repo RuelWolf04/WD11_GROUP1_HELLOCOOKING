@@ -16,7 +16,7 @@ const newDishCard = () => {
                   <div class="card-body">
                     <h5 class="card-title">${a.name}</h5>
                     <p class="card-text">${a.hash}</p>
-                    <p class="card-text">${a.cookingTime} | Calories: ${a.calorie}</p>
+                    <p class="card-text">${a.cookingTime} | Calories: ${a.nutrifacts.calorie}</p>
                   </div>
                   <div class="card-overlay">
                     <div class="card-buttons">
