@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="">
   <head>
-    <title>Products</title>
+    <title>HelloCooking-Products</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="assets/css/styles/font-awesome.css" />
 
     <!-- ========= STYLES ========== -->
-    <link rel="stylesheet" href="assets/css/styles/base/nav.css" />
     <link rel="stylesheet" href="assets/css/styles/root.css" />
+    <link rel="stylesheet" href="assets/css/styles/base/nav.css" />
     <link rel="stylesheet" href="assets/css/styles/products.css" />
     <link rel="stylesheet" href="assets/css/styles/base/footer.css" />
     <link rel="stylesheet" href="assets/css/styles/base/modal.css" />
@@ -77,6 +77,23 @@
                   <li class="nav__menu-item">
                     <a href="contact.html" role="menuitem">Contact</a>
                   </li>
+                  <div class="color-theme-container">
+                    <button
+                      class="button-theme button-theme-light"
+                      data-theme="light"
+                    >
+                      <img src="assets/imgs/color-scheme/sun.png" alt="" />
+                    </button>
+                    <button
+                      class="button-theme button-theme-dark active"
+                      data-theme="dark"
+                    >
+                      <img
+                        src="assets/imgs/color-scheme/full-moon.png"
+                        alt=""
+                      />
+                    </button>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -107,50 +124,10 @@
               <span class="btn-name">Search</span>
             </button>
           </div>
-          <div class="filter-drowpdown-container">
-            <button class="btn" id="product-filter-btn" type="button">
-              <i class="fa-solid fa-filter"></i>
-              <span class="btn-name">Filter</span>
-            </button>
-            <div class="filter-dropdown">
-              <div class="filter-dropdown-main-ingredient">
-                <div class="">
-                  <label for="fish">Fish</label>
-                  <input type="radio" name="main-ingredient" id="fish" />
-                </div>
-                <div class="">
-                  <label for="chicken">Chicken</label>
-                  <input type="radio" name="main-ingredient" id="chicken" />
-                </div>
-                <div class="">
-                  <label for="pork">Pork</label>
-                  <input type="radio" name="main-ingredient" id="pork" />
-                </div>
-                <div class="">
-                  <label for="shrimp">Shrimp</label>
-                  <input type="radio" name="main-ingredient" id="shrimp" />
-                </div>
-              </div>
-              <div class="filter-dropdown-vegetable-ingredient">
-                <div class="">
-                  <label for="sitaw">Sitaw</label>
-                  <input type="checkbox" name="main-ingredient" id="sitaw" />
-                </div>
-                <div class="">
-                  <label for="kalabasa">Kalabasa</label>
-                  <input type="checkbox" name="main-ingredient" id="kalabasa" />
-                </div>
-                <div class="">
-                  <label for="repolyo">Repolyo</label>
-                  <input type="checkbox" name="main-ingredient" id="repolyo" />
-                </div>
-                <div class="">
-                  <label for="talong">Talong</label>
-                  <input type="checkbox" name="main-ingredient" id="talong" />
-                </div>
-              </div>
-            </div>
-          </div>
+          <button class="btn" id="product-filter-btn" type="button">
+            <i class="fa-solid fa-filter"></i>
+            <span class="btn-name">Filter</span>
+          </button>
           <button
             class="btn"
             id="product-cart-btn"
@@ -169,239 +146,7 @@
             <div
               class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-3 g-2"
               id="dish-cards"
-            >
-              <!-- <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img
-                      src="assets/imgs/productImgs/Healthy-Adobo-Recipe-HN857-iStock629557450-Sized 1.jpg"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Lite Adobo</h5>
-                    <p class="card-text">Tangy Chicken in Garlic Sauce</p>
-                    <p class="card-text">30m | Calories: 134.5</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/afritada 1.jpg" />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Traditional Chicken Afritada</h5>
-                    <p class="card-text">with Organic Tomato Sauce</p>
-                    <p class="card-text">15m | Calories: 504.7</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/broiledtilapia 1.jpg" />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Broiled Tilapia</h5>
-                    <p class="card-text">in Oozing Parmesan Cheese</p>
-                    <p class="card-text">30m | Calories: 177.1</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img
-                      src="assets/imgs/productImgs/Pan-Fried-chicken-breast-herowm 1.jpg"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Fried Chicken</h5>
-                    <p class="card-text" id="sub">
-                      Pan-fried with small amount of fat
-                    </p>
-                    <p class="card-text">15m | Calories: 183.1</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/steak 1.jpg" />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Marsala Steak</h5>
-                    <p class="card-text">with Mushrooms Remix</p>
-                    <p class="card-text">15m | Calories: 242.4</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img
-                      src="assets/imgs/productImgs/Vegan-Sisig_0953-768x1024 1.jpg"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Vegan Sisig</h5>
-                    <p class="card-text" id="sub">
-                      Marinated Shitake, Beech and Oyster Mushrooms
-                    </p>
-                    <p class="card-text">20m | Calories: 174</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img
-                      src="assets/imgs/productImgs/rellenong-bangus-recipe 1.jpg"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Rellenong Bangus</h5>
-                    <p class="card-text" id="sub">
-                      Marinated in soy sauce and lemon juice
-                    </p>
-                    <p class="card-text">15m | Calories: 117</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img
-                      src="assets/imgs/productImgs/Pinchos-de-Pollo-Puerto-Rican-chicken-pinchos-recipe-9-720x720 1.jpg"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Puerto Rican Pollo Pinchos</h5>
-                    <p class="card-text" id="sub">
-                      marinated in fresh herbs chicken kebabs
-                    </p>
-                    <p class="card-text">30m | Calories: 177.1</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/fishstew 1.jpg" />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Italian Fish Stew</h5>
-                    <p class="card-text" id="sub">
-                      cooked in Organic Tomato Sauce and fresh herbs
-                    </p>
-                    <p class="card-text">21m | Calories: 436</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100">
-                  <div class="card-image-container">
-                    <img src="assets/imgs/productImgs/1992090 1.jpg" />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title">Eggplant Bake</h5>
-                    <p class="card-text" id="sub">
-                      with Organic Peppers and Mushrooms
-                    </p>
-                    <p class="card-text">60m | Calories: 192.2</p>
-                  </div>
-                  <div class="card-overlay">
-                    <div class="card-buttons">
-                      <button>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                      </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            </div>
+            ></div>
           </div>
 
           <div class="product-section-container mb-3">
@@ -915,5 +660,6 @@
     <!-- ========= JS ========== -->
     <script src="assets/js/index.js"></script>
     <script type="module" src="assets/js/datagather.js"></script>
+    <script src="assets/js/colorScheme.js" type="module"></script>
   </body>
 </html>

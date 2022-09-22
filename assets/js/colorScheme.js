@@ -4,10 +4,10 @@ const handleThemeChange = (e) => {
   const theme = e.currentTarget.dataset.theme;
   document.documentElement.setAttribute('data-theme', theme)
   localStorage.setItem('customTheme', theme)
-  e.currentTarget.classList.remove('active') 
 }
 
 themeButtons.forEach(c => c.addEventListener('click', handleThemeChange))
+
 
 
 

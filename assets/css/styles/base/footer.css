@@ -56,23 +56,32 @@ footer {
 
 
 
+
+
 /* color scheme */
+
+.nav_menu .color-theme-container {
+  display: none;
+}
+
+
 
 .color-theme-container {
   position: fixed;
   bottom: 20px;
   left: 10px;
+  background-color: var(--green);
+  border-radius: 100vmax;
+  user-select: none;
+  z-index: 20;
 }
 
 .color-theme-container .button-theme {
-  width: calc(3vw + 1rem);
+  width: 3.5rem;
   aspect-ratio: 1/1;
   padding: 10px;
   border-radius: 100vmax;
   background-color: var(--green);
-  transform: scale(0);
-  display: none;
-  pointer-events: none;
   transition: var(--transition-all-250-ease-out);
   cursor: pointer;
 }
@@ -81,17 +90,11 @@ footer {
   object-fit: contain;
 }
 
-.color-theme-container .button-theme.active {
-  transform: scale(1);
-  pointer-events: auto;
-  display: block;
-}
-
 
 
 
 #messenger-button {
-  width: calc(3vw + 1rem);
+  width: 3.5rem;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -105,7 +108,16 @@ footer {
 
 
 
+
+
+
+
 @media (max-width: 580px){
+  .color-theme-container {
+  display: none;
+  }
+
+
   .footer-left__first,
   .footer-left__second,
   .footer-left__third {

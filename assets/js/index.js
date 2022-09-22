@@ -92,6 +92,7 @@ carouselBtns.forEach(cBtn => {
         }
 
 
+// button color scheme
 
 
 

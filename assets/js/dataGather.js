@@ -23,7 +23,7 @@ const newDishCard = () => {
                       <button onclick="viewproduct('${a.id}')">
                         <i class="fa-solid fa-magnifying-glass"></i>
                       </button>
-                      <button><i class="fa-solid fa-bag-shopping"></i></button>
+                      <button onclick="window.location.href='cart.html'"><i class="fa-solid fa-bag-shopping"></i></button>
                     </div>
                   </div>
                 </div>

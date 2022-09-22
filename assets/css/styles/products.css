@@ -11,6 +11,7 @@ main {
 
 .card {
   position: relative;
+  color: hsl(var(--text) / 1);
   padding-bottom: 2rem;
 }
 
@@ -42,7 +43,7 @@ main {
 
 .product-section-container {
   padding: 1rem;
-  background-color: #e7e7e750;
+  background-color: var(--gray-200);
   border-radius: 10px;
 }
 
@@ -57,13 +58,13 @@ main {
 #product-cart-btn,
 #product-search-btn {
   padding: 10px 1rem !important;
-  background-color: #5fc44b;
+  background-color: var(--green);
   border: none;
   display: flex;
   align-items: center;
   gap: 5px;
   line-height: 1;
-  color: var(--gray-100);
+  color: #fefefe;
 }
 
 #product-filter-btn i,
@@ -72,42 +73,7 @@ main {
   font-size: .775rem;
 }
 
-#product-filter-btn:focus ~ .filter-dropdown {
-  pointer-events: auto;
-opacity: 1;
-}
 
-.filter-drowpdown-container {
-  position: relative;
-}
-
-.filter-drowpdown-container .filter-dropdown {
-  position: absolute;
-  top: calc(100% + 10px);
-  right: 0;
-  background-color: antiquewhite;
-  z-index: 10;
-  pointer-events: none;
-  opacity: 0;
-  display: flex;
-  gap: 2rem;
-  padding: 1rem;
-}
-
-.filter-drowpdown-container .filter-dropdown input {
-  display: none;
-}
-
-.filter-dropdown label {
-  padding: 10px;
-  width: 8rem;
-  transition: .2s ease-out;
-}
-
-.filter-dropdown label:hover {
-  background-color: var(--green);
-  color: var(--gray-100);
-}
 
 
 
@@ -126,6 +92,11 @@ opacity: 1;
   color: var(--green);
 }
 
+.card-body {
+  border-top: 5px solid var(--green);
+  color: hsl(var(--text) / 1);
+
+}
 
 .card-body .card-title {
   font-family: var(--ff-lato);
@@ -187,6 +158,7 @@ opacity: 1;
   background-color: var(--green);
   color: var(--gray-100);
 }
+
 
 
 

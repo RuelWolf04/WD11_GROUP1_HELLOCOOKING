@@ -33,7 +33,7 @@
             <div class="container">
               <nav class="">
                 <div class="nav__logo-container" aria-label="logo / go-to-hompage">
-                  <a href="#" tabindex="0">
+                  <a href="index.html" tabindex="0">
                     <img
                       class="nav__logo-img js-nav-logo"
                       src="assets/imgs/logo/hc-logo.png"
@@ -79,6 +79,23 @@
                       <li class="nav__menu-item">
                         <a href="contact.html" role="menuitem">Contact</a>
                       </li>
+                      <div class="color-theme-container">
+                        <button
+                          class="button-theme button-theme-light"
+                          data-theme="light"
+                        >
+                          <img src="assets/imgs/color-scheme/sun.png" alt="" />
+                        </button>
+                        <button
+                          class="button-theme button-theme-dark active"
+                          data-theme="dark"
+                        >
+                          <img
+                            src="assets/imgs/color-scheme/full-moon.png"
+                            alt=""
+                          />
+                        </button>
+                      </div>
                     </ul>
                   </div>
                 </div>
@@ -116,7 +133,7 @@
 
           <div class="col-lg-4">
             <div class="order-button-container">
-              <button>Order Now</button>
+              <button onclick="window.location.href = 'cart.html'">Order Now</button>
             </div>
             <div class="brief-description">
               <p><span class="label me-1">Category : </span> <span id="js-recipe-category"></span></p>

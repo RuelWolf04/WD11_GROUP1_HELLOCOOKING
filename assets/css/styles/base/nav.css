@@ -47,8 +47,7 @@ ul {
 
 p {
   margin: 0;
-  padding: 0;
-}
+  padding: 0;}
 
 img { width: 100%; 
 height: auto;}
@@ -281,9 +280,16 @@ svg.ham {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 200px;
+    width: 300px;
     transform: translateX(-200%);
     transition: transform 1s ease-out;
+  }
+
+  .nav__menu .color-theme-container {
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 15px;
   }
   
   .open-menu-btn[aria-expanded=true]+.nav__menu-container {
@@ -294,9 +300,17 @@ svg.ham {
     background-color: var(--green);
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     justify-content: start;
+    position: relative;
     
+  }
+
+  .nav__menu .color-theme-container {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
   }
 
   .nav__menu .nav__menu-item {
