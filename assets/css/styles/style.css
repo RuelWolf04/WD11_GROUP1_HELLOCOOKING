@@ -1,11 +1,22 @@
 
+
+
+
+
+
+
 /* ################################
       Header
 ###################################*/
 
 .header{
   padding-top: 100px;
+
 }
+
+
+
+
 
 
 
@@ -150,11 +161,17 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   display: flex;
   align-items: center;
   height: 100%;
+
 }
 
 .card__main .card__main-content h3 {
   font-family: var(--ff-lato);
   font-weight: 600;
+  color: var(--black);
+}
+
+.card__main .card__main-content p {
+  color: var(--black);
 }
 
 .card__main .card__main-content button {
@@ -221,7 +238,7 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   transition: .2s ease-out;
   transform-origin: top right;
   cursor: pointer;
-  background-color: var(--green);
+  background-color: hsl(var(--bg) / 1);
 }
 
 
@@ -242,6 +259,7 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 
 .description {
   padding: 15px;
+  border-top: 5px solid var(--green);
 }
 
 .card- .description .line1 h5 {
@@ -313,10 +331,11 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   margin: .6125rem;
   padding: 1.5rem;
   align-items: center;
-  background-color: #FFFB7D;
+  background-color: hsl(58, 100%, 75%);
   border-radius: 2rem;
-  outline: 1px dashed black;
-  outline-offset: -5px;
+  outline: 2px dashed #000;
+  color: var(--black);
+  outline-offset: -10px;
 }
 
 .reason-right {
@@ -364,6 +383,7 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 .comment-card-container .card {
   border: none;
   width: 16rem;
+  background-color: transparent;
 }
 
 .comment-card-img-container {
@@ -396,17 +416,24 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 
 
 
+
+
+
+
+
+
 /* ################################
       Main - FAQS
 ###################################*/
 
 .faq-accordion .faq-qa {
-  background-color: var(--green);
   border: 2px solid var(--green);
   margin-bottom: 1rem;
 }
 
 .faq-accordion .faq-qa label{
+  background-color: var(--green);
+
   display: flex;
   align-items: center;
   position: relative;
@@ -420,9 +447,6 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   padding: .875rem 1.75rem .875rem 1.3125rem;
 }
 
-.faq-accordion .faq-qa .faq-answer-container {
-  padding: .875rem 1.3125rem;
-}
 
 .faq-accordion .faq-qa input {
   display: none;
@@ -436,7 +460,8 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 }
 
 .faq-accordion .faq-qa .faq-answer-container {
-  background-color: #fefefe;
+  padding: .875rem 1.3125rem;
+  background-color: var(--bg) !important;
   line-height: 1.5;
   font-size: var(--fs-18);
   display: none;

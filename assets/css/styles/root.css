@@ -2,10 +2,14 @@
 :root {
 
   /* ###### COLORS ###### */
+  --main-hue: 110;
+  
 
+  
+  
+  --green: hsl(var(--main-hue), 74%, 58%);
   --red: #F12D31;
-  --green-light: hsl(110, 44%, 55%);
-  --green: #59B747;
+  --green-light: hsl(var(--main-hue), 44%, 55%);
   --orange: #FF9F29;
   --red-orange: #F17B31;
   --yellow: #f9d42f;
@@ -13,8 +17,35 @@
   --brown: #87431E;
   --blue: #3799DA;
   --green-1: hsla(79, 100%, 43%, 0.664);
+  --black: #2d2d2d;
+  --black1: hsl(0, 8%, 14%);
 
-  
+
+
+  /* dark color scheme */
+  /* --bg-dark: var(--main-hue) 80% 12%; */
+  --bg-dark: 0 8% 14%;
+  --text-dark: var(--main-hue) 80% 99%;
+  --muted-dark: var(--main-hue) 80% 99%;
+  --accent-dark: var(--main-hue) 65% 50%;
+  --secondary-dark: calc(var(--main-hue) - 195) 65% 50%;
+  --nav-dark: var(--main-hue) 10% 10%;
+
+
+
+    /* light color scheme */
+    --bg-light: var(--main-hue) 80% 99%;
+    --text-light: var(--main-hue) 80% 8%;
+    --muted-light: var(--main-hue) 20% 70%;
+    --accent-light: var(--main-hue) 70% 60%;
+    --secondary-light: calc(var(--main-hue) - 195) 70% 60%;
+    
+    --nav-light: var(--main-hue) 80% 99%;
+
+
+
+
+
 
   /* grays */
 
@@ -28,9 +59,9 @@
   --gray-500: #adb5bd;
   --gray-600: #6c757d;
   --gray-700: #495057;
-  --gray-700-p3: hsl(210 9% 31% / .3) ;
+  --gray-700-p3: rgba(72, 86, 73, 0.3) ;
   --gray-800: hsl(210, 10%, 23%);
-  --gray-900: #212529;
+  --gray-900: hsl(113, 11%, 15%);
 
 
 
@@ -46,7 +77,7 @@
   --step--3: clamp(0.58rem, calc(0.50rem + 0.37vw), 0.77rem);
   --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
   --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
-  --step-0: clamp(0.875rem, 2vw, 1rem);
+  --step-0: clamp(0.675rem, 2vw, 1rem);
   --step-1: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
   --step-2: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
   --step-3: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
@@ -68,5 +99,61 @@
 
   /* ###### BUTTON PADDING ###### */
   --button-padding: .6125em 3em;
+
+
+
+
+  /* ###### transition ###### */
+  --transition-all-150-ease: transition .15s ease;
+  --transition-all-150-ease-in: transition .15s ease-in;
+  --transition-all-150-ease-out: transition .15s ease-out;
   
+  --transition-all-250-ease: transition .25s ease;
+  --transition-all-250-ease-in: transition .25s ease-in;
+  --transition-all-250-ease-out: transition .25s ease-out;
+}
+
+
+@media (prefers-color-scheme: light){
+  :root {
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+    --muted: var(--muted-light);
+    --accent: var(--accent-light);
+    --secondary: var(--secondary-light);
+    color-scheme: light;
+  }
+}
+
+
+@media (prefers-color-scheme: dark){
+  :root {
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
+    --muted: var(--muted-dark);
+    --accent: var(--accent-dark);
+    --secondary: var(--secondary-dark);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="light"] {
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+    --muted: var(--muted-light);
+    --accent: var(--accent-light);
+    --secondary: var(--secondary-light);
+  --nav: var(--nav-light);
+
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --muted: var(--muted-dark);
+  --accent: var(--accent-dark);
+  --secondary: var(--secondary-dark);
+  --nav: var(--nav-dark);
+  color-scheme: dark;
 }

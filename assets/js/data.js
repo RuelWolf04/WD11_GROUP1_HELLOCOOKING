@@ -66,6 +66,7 @@ export const recipes = [
     },
     descrip:
       "Chicken Afritada is a classic Filipino stew made of beef, pork, chicken, or fish simmered until perfectly tender in a fresh tomato-based sauce with potatoes, carrots, and bell peppers. This classic Filipino stew is easy to make and budget-friendly yet hearty and flavorful. Perfect for family dinners and special occasions!",
+
       ingredients: {
         item1: "3 tbsp canola oil",
         item2: "1 clove garlic, minced",
@@ -358,4 +359,5 @@ export const recipes = [
       step2: "Tip- You can make the skewers bigger than 4 oz servings for company, but you may use a food scale to measure out 4 oz for yourself. This recipe makes 5-6 good sized skewers. You can also add onions, peppers, etc.",
     },
   },
+
 ];
