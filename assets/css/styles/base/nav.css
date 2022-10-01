@@ -151,7 +151,7 @@ transition: .3s ease-out;
   display: grid;
   place-content: center;
   background-color: var(--green);
-  display: none;
+  /* display: none; */
 }
 
 .nav__right button i {
@@ -337,6 +337,10 @@ svg.ham {
 
   .nav__right a {
   font-size: 14px;
+  }
+
+  nav #nav-login {
+    display: none;
   }
 
   
