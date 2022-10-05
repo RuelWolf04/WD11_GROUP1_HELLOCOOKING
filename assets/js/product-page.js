@@ -41,10 +41,4 @@ window.onload = function(){
   recipeDietaryFiber.textContent = recipeArray[0].nutrifacts.dietaryFiber
   recipeProtein.textContent = recipeArray[0].nutrifacts.protein
 
-
-
-
-
-
-
 }

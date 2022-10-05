@@ -3,7 +3,6 @@
       Footer
 ###################################*/
 footer {
-  user-select: none;
   margin-top: 2rem;
   /* background-color: #FFFB7D; */
 }
@@ -28,22 +27,49 @@ footer {
   margin: 2em;
 }
 
+.footer-left__container h5 {
+  margin-bottom: 10px;
+  user-select: none;
+}
+
 .footer-left__container a,
 .footer-left__container p {
   color: var(--text);
+  position: relative;
+  padding-block: 3px;
 }
 
-.footer-left__container a:not(i){
-  text-decoration: underline;
+.footer-left__container p::selection {
+  background-color: var(--green);
+  color: var(--text);
 }
 
-.footer-left__container p {
+.footer-left__container a:not(:has(i)) {
+  border-bottom: 3px solid transparent;
+  transition: .2s ease-out;
   user-select: none;
 }
+
+.footer-left__container a:not(:has(i)):hover {
+  border-bottom: 3px solid var(--green);
+}
+
+/* .footer-left__container p {
+  user-select: none;
+} */
 
 .footer-left__container .footer-social-links i {
   font-size: 20px;
   margin-top: 10px;
+  margin-inline: 5px;
+  border: none;
+  transition: all .25s ease-out;
+  user-select: none;
+}
+
+.footer-left__container .footer-social-links i:hover {
+  color: var(--green);
+  transform: scale(1.5);
 }
 
 .footer-bottom {
@@ -51,6 +77,13 @@ footer {
   padding-block: 1em;
   border-top: 1px solid var(--green);
 }
+
+
+
+
+
+
+
 
 
 /* color scheme */

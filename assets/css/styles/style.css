@@ -151,9 +151,8 @@
   margin-top: 3.125em;
   background-color: #85FFBD;
 background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-
-  padding-bottom: 1rem;
   border-radius: 5px;
+  padding-block: 2rem;
 }
 
 .card__main {
@@ -181,45 +180,17 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   border-radius: 5px;
 }
 
-
-.left-cards {
-  display: flex;
-  overflow-x: auto;
-  padding: 50px;
-  padding-right: 0;
+.left-cards-container {
+  background-color: #fb8075;
 }
 
-.left-cards::-webkit-scrollbar {
-  width: 10px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.left-cards::-webkit-scrollbar-thumb {
-  background-color: #85FFBD;
-  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
-  border-radius: 100vmax;
-  box-shadow: inset 0px 0px 2px var(--gray-700);
-}
-
-.left-cards::-webkit-scrollbar-thumb:hover{
-  background-image: linear-gradient(45deg, #6ef9af 0%, #fbf675 100%);
-}
-
-.left-cards::-webkit-scrollbar-track {
-  background:hsl(208, 100%, 97%, 0.5);
-  border-radius: 100vmax;
-}
-
-
-
-.left-cards .card- .left-card-img-container {
+.card- .left-card-img-container {
   width: 100%;
   height: 12rem;
   overflow: hidden;
 }
 
-.left-cards .card- .left-card-img-container img {
+.card- .left-card-img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -227,35 +198,15 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 }
 
 .card- {
-  min-width: 300px;
-  height: 350px;
-  box-shadow: -8px 2px 12px 4px rgba(0,0,0,0.55);
--webkit-box-shadow: -8px 2px 12px 4px rgba(0,0,0,0.55);
--moz-box-shadow: -8px 2px 12px 4px rgba(0,0,0,0.55);
-  transition: .2s ease-out;
+  height: 330px;
   z-index: 5;
   position: relative;
   transition: .2s ease-out;
-  transform-origin: top right;
   cursor: pointer;
-  background-color: hsl(var(--bg) / 1);
+  background-color: hsl(var(--bg) / .5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  
 }
-
-
-.card-:not(:first-child) {
-  margin-left: -50px;
-}
-
-.card-:hover {
-  transform: rotateZ(5deg);
-  transition: 0.4s ease-out;
-}
-
-.card-:hover~.card- {
-  transform: translateX(50px);
-  transition: 0.4s ease-out;
-}
-
 
 .description {
   padding: 15px;
@@ -301,8 +252,14 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 }
 
 
-
-
+.swiper-pagination-bullet {
+  border: 1px solid #4cfb9e;
+  background-color: #fefefe;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #4cfb9e !important;
+}
 
 
 
@@ -352,7 +309,6 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   font-size: var(--fs-20);
   font-weight: 500;
 }
-
 
 
 
@@ -433,7 +389,6 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 
 .faq-accordion .faq-qa label{
   background-color: var(--green);
-
   display: flex;
   align-items: center;
   position: relative;
@@ -441,10 +396,8 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
   font-size: var(--fs-18);
   font-weight: 500;
   color: #fefefe;
-}
-
-.faq-accordion .faq-qa label {
   padding: .875rem 1.75rem .875rem 1.3125rem;
+  transition: all .25s ease-out;
 }
 
 
@@ -460,18 +413,29 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 }
 
 .faq-accordion .faq-qa .faq-answer-container {
-  padding: .875rem 1.3125rem;
   background-color: var(--bg) !important;
   line-height: 1.5;
   font-size: var(--fs-18);
-  display: none;
-  transition: .5s ease;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s ease-out;
+}
+
+.faq-accordion .faq-qa .faq-answer-container p{
+  line-height: 0;
+  opacity: 0;
+  transition: .15s ease-in;
+  pointer-events: none;
+}
+
+.faq-accordion .faq-qa input:checked ~ .faq-answer-container p {
+  line-height: normal;
+  opacity: 1;
 }
 
 .faq-accordion .faq-qa input:checked ~ .faq-answer-container {
-  transition: .5s ease;
-  display: block;
-  
+  height: max-content;
+  padding: 20px;
 }
 
 .faq-accordion .faq-qa input:checked ~ label {
@@ -480,9 +444,8 @@ background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
 
 .faq-accordion .faq-qa input:checked ~ label i {
   transform-origin: 0 0 0 0;
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
-
 
 
 

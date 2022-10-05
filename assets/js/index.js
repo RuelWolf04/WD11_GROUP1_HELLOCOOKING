@@ -26,6 +26,8 @@ openMenuBtn.addEventListener("click", () => {
 })
 
 
+
+
 // ----------------hero carousel
 
 const carouselBtns = document.querySelectorAll("[data-carousel-btn]")
@@ -92,8 +94,21 @@ carouselBtns.forEach(cBtn => {
         }
 
 
-// button color scheme
 
 
 
-        
+  const filterCategory = (category) => {
+    const productSectionContainer = document.querySelectorAll('.product-section-container')
+    alert(category)
+    if( category === 'all'){
+      for(let productContainer of productSectionContainer){
+        productContainer.classList.add('show')
+      }
+    }
+
+    for(let productContainer of productSectionContainer){
+      productContainer.classList.contains(category) ? productContainer.classList.add('show') : productContainer.classList.remove('show')
+    }
+
+  };
+  

@@ -101,7 +101,7 @@
       <div class="container" id="filteration">
         <div class="d-flex gap-2">
           <div class="input-group" id="search-">
-            <input type="text" class="form-control" placeholder="" />
+            <input type="text" class="form-control" placeholder="Search..." />
             <button class="btn" id="product-search-btn">
               <i class="fa-solid fa-magnifying-glass"></i>
               <span class="btn-name">Search</span>
@@ -110,6 +110,12 @@
           <button class="btn" id="product-filter-btn" type="button">
             <i class="fa-solid fa-filter"></i>
             <span class="btn-name">Filter</span>
+            <ul class="filter-menu">
+              <li onclick="filterCategory('all')" class="active">All</li>
+              <li onclick="filterCategory('dish')">Dish</li>
+              <li onclick="filterCategory('sides')">Sides</li>
+              <li onclick="filterCategory('desserts')">Desserts</li>
+            </ul>
           </button>
           <button
             class="btn"
@@ -124,7 +130,7 @@
       </div>
       <section id="products-section">
         <div class="container">
-          <div class="product-section-container mb-3">
+          <div class="product-section-container mb-3 dish">
             <h4 class="mb-3" id="product-section-subheading">Dish</h4>
             <div
               class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-3 g-2"
@@ -132,7 +138,7 @@
             ></div>
           </div>
 
-          <div class="product-section-container mb-3">
+          <div class="product-section-container mb-3 sides">
             <h4 class="mb-3" id="product-section-subheading">Sides</h4>
             <div
               class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-3 g-2"
@@ -350,7 +356,7 @@
             </div>
           </div>
 
-          <div class="product-section-container mb-3">
+          <div class="product-section-container mb-3 desserts">
             <h4 class="mb-3" id="product-section-subheading">Desserts</h4>
             <div
               class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-3 g-2"
@@ -644,5 +650,13 @@
     <script src="assets/js/index.js"></script>
     <script type="module" src="assets/js/datagather.js"></script>
     <script src="assets/js/colorScheme.js" type="module"></script>
+
+    <script>
+      const filterBtn = document.querySelector("#product-filter-btn");
+
+      filterBtn.addEventListener("click", () => {
+        filterBtn.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
