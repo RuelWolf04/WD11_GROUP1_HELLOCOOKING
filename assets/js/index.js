@@ -99,16 +99,48 @@ carouselBtns.forEach(cBtn => {
 
   const filterCategory = (category) => {
     const productSectionContainer = document.querySelectorAll('.product-section-container')
-    alert(category)
-    if( category === 'all'){
-      for(let productContainer of productSectionContainer){
-        productContainer.classList.add('show')
-      }
-    }
-
+    
     for(let productContainer of productSectionContainer){
       productContainer.classList.contains(category) ? productContainer.classList.add('show') : productContainer.classList.remove('show')
     }
 
+    if( category === 'all'){
+      for(let productContainer of productSectionContainer){ 
+        productContainer.classList.add('show')
+      }
+    }
   };
-  
+
+  window.onload = () => {
+    const productSectionContainer = document.querySelectorAll('.product-section-container')
+
+    for(let productContainer of productSectionContainer){ 
+      productContainer.classList.add('show')
+    } 
+
+  }
+
+
+  const searchInput = document.querySelector('#search-input')
+
+  const searchProduct = () => {
+
+    const productsSection = document.querySelector('#products-section')
+    const productNames = productsSection.querySelectorAll('.card-title')
+
+    // will get the input value then loop through all card-title, add remove class to those doesnt match
+
+    const searhInputValue = searchInput.value
+
+    for(let productName of productNames){
+      let lowerCaseProductName = productName.innerText.toLowerCase()
+      let card = productName.parentElement.parentElement.parentElement
+      if(!lowerCaseProductName.includes(searhInputValue.toLowerCase())){
+        card.classList.add('remove')
+        
+      } else {
+        card.classList.remove('remove')
+      }
+    }
+
+  }

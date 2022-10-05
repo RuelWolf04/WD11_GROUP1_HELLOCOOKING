@@ -130,7 +130,9 @@ opacity: 1;
 
 
 
-
+.col.remove {
+  display: none;
+}
 
 
 

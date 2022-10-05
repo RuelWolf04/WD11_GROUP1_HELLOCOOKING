@@ -101,8 +101,18 @@
       <div class="container" id="filteration">
         <div class="d-flex gap-2">
           <div class="input-group" id="search-">
-            <input type="text" class="form-control" placeholder="Search..." />
-            <button class="btn" id="product-search-btn">
+            <input
+              type="text"
+              id="search-input"
+              class="form-control"
+              placeholder="Search..."
+              onchange="searchProduct()"
+            />
+            <button
+              class="btn"
+              id="product-search-btn"
+              onclick="searchProduct()"
+            >
               <i class="fa-solid fa-magnifying-glass"></i>
               <span class="btn-name">Search</span>
             </button>
