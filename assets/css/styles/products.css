@@ -5,7 +5,7 @@ main {
 
 /* ========= filter ============ */
 
-#filteration{
+#filteration {
   margin-block: 1rem;
   z-index: 10;
 
@@ -22,11 +22,12 @@ main {
 }
 
 #sub {
-  white-space: nowrap; 
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
-.card-body > *:not(:last-child){
+
+.card-body>*:not(:last-child) {
   margin-bottom: 10px;
 }
 
@@ -35,7 +36,7 @@ main {
   height: 10rem;
 }
 
-.card-image-container > img {
+.card-image-container>img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -55,7 +56,7 @@ main {
 }
 
 
-#search- input[type = "text"]{
+#search- input[type="text"] {
   font-size: 1rem;
   padding: 5px 10px;
   outline: none;
@@ -100,29 +101,29 @@ main {
 
 }
 
-#product-filter-btn.active  .filter-menu  {
+#product-filter-btn.active .filter-menu {
   opacity: 1;
   transform: translateY(0);
 }
 
 
-#product-filter-btn .filter-menu > li {
+#product-filter-btn .filter-menu>li {
   width: 6rem;
   padding-block: 10px;
   opacity: .7;
   cursor: pointer;
 }
 
-#product-filter-btn.active .filter-menu > li {
+#product-filter-btn.active .filter-menu>li {
   pointer-events: auto;
 }
 
-#product-filter-btn .filter-menu > li:hover {
+#product-filter-btn .filter-menu>li:hover {
   opacity: 1;
 }
 
-#product-filter-btn .filter-menu > li.active {
-opacity: 1;
+#product-filter-btn .filter-menu>li.active {
+  opacity: 1;
 }
 
 
@@ -158,7 +159,7 @@ opacity: 1;
   font-weight: 500;
 }
 
-.card-body .card-text:last-child{
+.card-body .card-text:last-child {
 
   position: absolute;
   left: 10px;
@@ -219,7 +220,7 @@ opacity: 1;
 
 
 @media screen and (max-width: 768px) {
-  #filteration .btn-name{
+  #filteration .btn-name {
     display: none;
   }
 }

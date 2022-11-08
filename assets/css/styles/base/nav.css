@@ -47,10 +47,13 @@ ul {
 
 p {
   margin: 0;
-  padding: 0;}
+  padding: 0;
+}
 
-img { width: 100%; 
-height: auto;}
+img {
+  width: 100%;
+  height: auto;
+}
 
 
 
@@ -67,7 +70,6 @@ height: auto;}
 
 nav {
   scroll-snap-align: start;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,7 +78,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  
+
   padding: 1em var(--section-padding);
   background-color: hsl(var(--nav) / 1);
   box-shadow: 0 5px 20px var(--gray-700-p3);
@@ -126,7 +128,7 @@ nav a:focus-visible {
   position: absolute;
   left: 0;
   bottom: 0;
-transition: .3s ease-out;
+  transition: .3s ease-out;
 }
 
 
@@ -142,7 +144,7 @@ transition: .3s ease-out;
   margin-inline: 5px;
 }
 
-.nav__right button{
+.nav__right button {
   width: 2em;
   aspect-ratio: 1/ 1;
   border: 1px solid transparent;
@@ -174,7 +176,7 @@ transition: .3s ease-out;
   color: var(--text);
 }
 
-.nav__right a i{
+.nav__right a i {
   display: none;
 }
 
@@ -199,10 +201,13 @@ transition: .3s ease-out;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  user-select: none;}
+  user-select: none;
+}
+
 .hamRotate.active {
   transform: rotate(45deg);
 }
+
 .hamRotate180.active {
   transform: rotate(180deg);
 }
@@ -214,30 +219,35 @@ svg.ham {
 
 
 .line {
-  fill:none;
+  fill: none;
   transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
   stroke: hsl(var(--text) / 1);
-  stroke-width:5.5;
-  stroke-linecap:round;
+  stroke-width: 5.5;
+  stroke-linecap: round;
 }
+
 .ham1 .top {
   stroke-dasharray: 40 139;
 }
+
 .ham1 .bottom {
   stroke-dasharray: 40 180;
 }
+
 .ham1.active .top {
   stroke-dashoffset: -98px;
 }
+
 .ham1.active .bottom {
   stroke-dashoffset: -138px;
 }
+
 /* menu */
 
 
 
 
-.bodyScroll .nav__logo-container{
+.bodyScroll .nav__logo-container {
   max-width: 100px;
 }
 
@@ -245,7 +255,7 @@ svg.ham {
 
 
 @media (max-width: 991px) {
-  
+
 
   nav .nav__logo-container {
     order: 1;
@@ -269,11 +279,11 @@ svg.ham {
   }
 
   .nav__menu-btn {
-    display: inline-block; 
+    display: inline-block;
     height: 100%;
   }
 
-  
+
   .nav__menu-container {
     z-index: 20;
     position: absolute;
@@ -290,11 +300,11 @@ svg.ham {
     bottom: 50px;
     left: 15px;
   }
-  
+
   .open-menu-btn[aria-expanded=true]+.nav__menu-container {
     transform: translateX(0);
   }
-  
+
   .nav__menu {
     background-color: var(--green);
     flex-direction: column;
@@ -302,7 +312,7 @@ svg.ham {
     height: 90vh;
     justify-content: start;
     position: relative;
-    
+
   }
 
   .nav__menu .color-theme-container {
@@ -329,19 +339,19 @@ svg.ham {
 
 }
 
-@media (max-width: 540px){
+@media (max-width: 540px) {
 
-  nav{
+  nav {
     padding-inline: 10px;
   }
 
   .nav__right a {
-  font-size: 14px;
+    font-size: 14px;
   }
 
   nav #nav-login {
     display: none;
   }
 
-  
+
 }

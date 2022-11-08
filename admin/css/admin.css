@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lobster&family=Lobster+Two&display=swap');
+
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--ff-lato);
+}
+
+h1 {
+  font-family: var(--ff-lobster-italic);
+}
+
+h2, h3, h4, h5 {
+  font-family: var(--ff-lobster);
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+}
+
+.user-btn,
+.notif-btn {
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid transparent;
+  border-radius: 100vmax;
+  margin: 5px;
+}
+
+div:has(button.notif-btn) {
+  position: relative;
+}
+
+.notif-count {
+  position: absolute;
+  top: 0;
+  left: -5px;
+  background-color: rgb(255, 85, 85);
+  width: 25px;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #fefefe;
+}
+
+
+.side-bar {
+  width: 250px;
+  background-color: #251B37;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  padding-block: 5em 1em;
+}
+.side-bar ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.side-bar ul > li{
+  padding: .6125em 1.5em;
+  display: flex;
+  align-items: center;
+  transition: .25s ease-out;
+  cursor: pointer;
+}
+
+.side-bar ul > li.active {
+  background-color: var(--green);
+}
+.side-bar ul > li.active a,
+.side-bar ul > li.active i {
+  color: #fefefe;
+}
+
+.side-bar ul > li > i {
+  font-size: 1.1rem;
+  color: #fefefe;
+}
+
+.side-bar ul > li:hover {
+  background-color: var(--green);
+}
+
+.side-bar ul > li > a {
+  margin-left: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #fefefe;
+}
+
+.side-bar ul > .sidebar-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.side-bar ul > .sidebar-btn > li >span {
+  color: #fefefe;
+  margin-left: 10px;
+}
