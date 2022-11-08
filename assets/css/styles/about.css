@@ -73,6 +73,19 @@ main {
   text-align: center;
 }
 
+.wwa-container2-img {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.wwa-container2-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+
+}
 
 
 .wwa-container2 {
